@@ -1,6 +1,7 @@
 import {
   BackToTopButton,
   Divider,
+  FAQSection,
   HeroSection,
   NewCollection,
   PackagingSection,
@@ -25,9 +26,9 @@ export default function Home() {
           "/images/logo.svg",
         ]}
       />
-      <SomeProduct />
+      {/* <SomeProduct /> */}
       <PackagingSection />
-      
+      <FAQSection/>
       <BackToTopButton />
     </div>
   );

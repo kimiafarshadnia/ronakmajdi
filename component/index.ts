@@ -7,3 +7,4 @@ export { SomeProduct } from "./home/SomeProduct";
 export { Divider } from "./home/Divider";
 export { BackToTopButton } from "./ui/BackToTopButton";
 export { NewCollection } from "./home/NewCollection";
+export { FAQSection } from "./home/FAQSection";
