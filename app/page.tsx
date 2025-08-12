@@ -29,6 +29,7 @@ export default function Home() {
       <NewCollection />
       <ParallaxSection />
       {/* <SomeProduct /> */}
+      <NewCollection />
       <PackagingSection />
       <FAQSection />
       <BackToTopButton />
