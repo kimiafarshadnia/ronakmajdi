@@ -5,6 +5,7 @@ import {
   HeroSection,
   NewCollection,
   PackagingSection,
+  ParallaxSection,
   SectionTwo,
   SomeProduct,
 } from "@/component";
@@ -14,7 +15,6 @@ export default function Home() {
     <div className="flex flex-col items-center justify-items-center  min-h-screen gap-16">
       <HeroSection />
       <SectionTwo />
-      <NewCollection/>
       <Divider
         logos={[
           "/images/logo.svg",
@@ -26,9 +26,11 @@ export default function Home() {
           "/images/logo.svg",
         ]}
       />
+      <NewCollection />
+      <ParallaxSection />
       {/* <SomeProduct /> */}
       <PackagingSection />
-      <FAQSection/>
+      <FAQSection />
       <BackToTopButton />
     </div>
   );

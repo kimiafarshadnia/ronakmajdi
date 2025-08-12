@@ -30,10 +30,10 @@ export const Button = ({
   ...rest
 }: Props) => {
   const baseStyles =
-    "inline-flex items-center rounded-full justify-center cursor-pointer px-8 py-2 text-sm font-medium duration-300 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-flex items-center justify-center cursor-pointer px-8 py-2 text-sm font-medium duration-300 transition-colors focus:outline-none";
 
   const variants: Record<Variant, string> = {
-    primary: "border border-black text-black hover:border-2 focus:ring-black ",
+    primary: "border border-black text-black hover:border-2",
   };
 
   const content = (

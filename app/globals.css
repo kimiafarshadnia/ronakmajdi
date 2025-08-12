@@ -4,8 +4,8 @@
 :root {
   --background: #ffffff;
   /* --secondary: #DAD6CF; */
+  /* #E5E1DA */
 }
-/* #E5E1DA */
 
 html[dir="rtl"] {
   direction: rtl;
@@ -18,14 +18,20 @@ body {
 
 @theme inline {
   --color-background: var(--background);
-  /* --color-foreground: var(--foreground); */
-  /* --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono); */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: oklch(98% 0.016 73.684);
+    --background: oklch(100% 0.00011 271.152);
     /* --foreground: #dcd2c6; */
+    /* oklch(98% 0.016 73.684) */
   }
+}
+
+.parallax-section {
+  background-image: url('../public/images/shoaes6.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }

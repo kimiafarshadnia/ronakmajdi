@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { Icon } from "../ui/Icon";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 interface FAQItem {
   question: string;
@@ -42,13 +44,15 @@ export const FAQSection = () => {
       </h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="rounded-xl shadow-sm border border-gray-200">
+          <div key={index} className="rounded-xl shadow-sm">
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center p-4 text-right"
+              className="w-full flex justify-between items-center p-4 text-right cursor-pointer"
             >
               <span className="text-lg">{faq.question}</span>
-              <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
+              <Icon
+                iconName={openIndex === index ? faChevronUp : faChevronDown}
+              />
             </button>
 
             <div

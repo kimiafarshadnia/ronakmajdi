@@ -29,7 +29,7 @@ export const SectionTwo = () => {
 
       // حرکت افقی عکس‌ها هنگام اسکرول
       gsap.to(leftImageRef.current, {
-        x: "-37vw",
+        x: "-30.5vw",
         ease: "power1.out",
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -40,7 +40,7 @@ export const SectionTwo = () => {
       });
 
       gsap.to(rightImageRef.current, {
-        x: "37vw",
+        x: "30.5vw",
         ease: "power1.out",
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -81,7 +81,7 @@ export const SectionTwo = () => {
   return (
     <section
       ref={sectionRef}
-      className="px-4 mx-auto relative min-h-[500px] w-full 
+      className="container px-4 mx-auto relative min-h-[500px] w-full 
                  flex flex-col md:flex-row items-center justify-center gap-6 overflow-hidden"
     >
       <div
@@ -100,7 +100,7 @@ export const SectionTwo = () => {
         className="w-full md:w-[300px] lg:w-[500px] flex flex-col justify-center items-center max-w-xl px-4 relative z-0 text-center"
       >
         <h2 className="text-3xl mb-4">ظرافتی لوکس در دل سادگی</h2>
-        <p>
+        <p className="md:px-8">
           روناک مجدی تجلی هنر طراحی مینیمال با نگاهی لوکس و متفاوت است. هر قطعه،
           با دقت در انتخاب متریال و توجه به جزئیات، برای بانویی خلق شده که
           زیبایی را در وقار، اصالت و سادگی می‌جوید.

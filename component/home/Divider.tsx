@@ -6,7 +6,7 @@ interface DividerProps {
 
 export const Divider = ({ logos }: DividerProps) => {
   return (
-    <div className="bg-[#E5E1DA] w-full py-1 px-4 overflow-x-hidden">
+    <div className="bg-[#E5E1DA] w-full pt-1 px-4 overflow-x-hidden">
       <div className="flex items-center gap-8 justify-around md:justify-between md:gap-0">
         {logos.map((logo, index) => (
           <div
