@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css");
+
+:root {
+  --background: #ffffff;
+  /* --secondary: #DAD6CF; */
+}
+/* #E5E1DA */
+
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+body {
+  font-family: "Vazir", sans-serif;
+  background: var(--background);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  /* --color-foreground: var(--foreground); */
+  /* --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono); */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(98% 0.016 73.684);
+    /* --foreground: #dcd2c6; */
+  }
+}

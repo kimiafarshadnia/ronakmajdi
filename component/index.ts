@@ -1,0 +1,9 @@
+export { HeroSection } from "./home/HeroSection";
+export { Icon } from "./ui/Icon";
+export { Button } from "./ui/Button";
+export { SectionTwo } from "./home/SectionTwo";
+export { PackagingSection } from "./home/PackagingSection";
+export { SomeProduct } from "./home/SomeProduct";
+export { Divider } from "./home/Divider";
+export { BackToTopButton } from "./ui/BackToTopButton";
+export { NewCollection } from "./home/NewCollection";
