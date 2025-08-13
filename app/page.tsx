@@ -3,6 +3,7 @@ import {
   Divider,
   FAQSection,
   HeroSection,
+  MostLovedSection,
   NewCollection,
   PackagingSection,
   ParallaxSection,
@@ -29,7 +30,7 @@ export default function Home() {
       <NewCollection />
       <ParallaxSection />
       {/* <SomeProduct /> */}
-      <NewCollection />
+      <MostLovedSection />
       <PackagingSection />
       <FAQSection />
       <BackToTopButton />

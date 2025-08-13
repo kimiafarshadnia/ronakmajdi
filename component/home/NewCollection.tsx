@@ -17,14 +17,14 @@ export const NewCollection = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col items-start justify-center gap-4 w-full"
+              className="group relative cursor-pointer overflow-hidden transition-all duration-300 flex flex-col items-start justify-center gap-4 w-full"
             >
-              <div className="relative w-full max-[400px]:h-[250px] max-[500px]:h-[300px] h-[300px] sm:h-[350px] xl:h-[380px]">
+              <div className="relative w-full h-96 overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="flex flex-col gap-2">
