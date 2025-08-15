@@ -27,11 +27,3 @@ body {
     /* oklch(98% 0.016 73.684) */
   }
 }
-
-.parallax-section {
-  background-image: url('../public/images/shoaes6.jpg');
-  background-size: cover;
-  background-position: bottom;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
