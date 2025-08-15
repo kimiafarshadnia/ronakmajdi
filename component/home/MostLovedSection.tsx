@@ -52,7 +52,6 @@ export function MostLovedSection({
           </p>
         </div>
 
-        {/* لیست محصولات */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {products.map((product) => (
             <div
