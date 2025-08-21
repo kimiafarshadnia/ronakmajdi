@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "slug": "black-dress",
+    "title": "پیراهن مشکی",
+    "category": "skirt",
+    "price": 1200000,
+    "image": "/images/product1.webp",
+    "description": "پیراهن مشکی ساده و لوکس برای مجالس رسمی."
+  },
+  {
+    "id": 2,
+    "slug": "white-shirt",
+    "title": "پیراهن سفید",
+    "category": "skirt",
+    "price": 850000,
+    "image": "/images/product1.webp",
+    "description": "پیراهن سفید کلاسیک مناسب استفاده روزمره."
+  },
+  {
+    "id": 3,
+    "slug": "long-coat",
+    "title": "مانتوی بلند",
+    "category": "skirt",
+    "price": 2200000,
+    "image": "/images/product1.webp",
+    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+  },
+  {
+    "id": 4,
+    "slug": "long-coat",
+    "title": "مانتوی بلند",
+    "category": "skirt",
+    "price": 2200000,
+    "image": "/images/product1.webp",
+    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+  },
+  {
+    "id": 5,
+    "slug": "long-coat",
+    "title": "مانتوی بلند",
+    "category": "skirt",
+    "price": 2200000,
+    "image": "/images/product1.webp",
+    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+  }
+]
