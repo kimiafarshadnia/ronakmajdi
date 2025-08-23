@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css");
 
 :root {
   --background: #000000;
@@ -8,23 +7,28 @@
   /* #E5E1DA */
 }
 
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 html[dir="rtl"] {
   direction: rtl;
   text-align: right;
 }
 body {
-  font-family: "Vazir", sans-serif;
+  font-family: "Vazirmatn", sans-serif;
   background: var(--background);
-}
-
-@theme inline {
-  --color-background: var(--background);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --background: oklch(100% 0.00011 271.152); */
-    /* --foreground: #dcd2c6; */
-    /* oklch(98% 0.016 73.684) */
-  }
 }

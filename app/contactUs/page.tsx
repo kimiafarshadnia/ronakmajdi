@@ -72,14 +72,14 @@ export default function ContactUs() {
                 type="text"
                 name="user_name"
                 placeholder="نام کامل"
-                className="w-full border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                className="w-full border border-[#E5E1DA] p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 required
               />
               <input
                 type="email"
                 name="user_email"
                 placeholder="ایمیل یا شماره تماس"
-                className="w-full border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                className="w-full border border-[#E5E1DA] p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
                 required
               />
             </div>
@@ -87,7 +87,7 @@ export default function ContactUs() {
               name="message"
               rows={5}
               placeholder="پیام شما"
-              className="w-full border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="w-full border border-[#E5E1DA] p-3 focus:outline-none focus:ring-2 focus:ring-gray-400"
               required
             />
             <Button type="submit" disabled={loading}>
@@ -124,7 +124,7 @@ export default function ContactUs() {
                 <Icon
                   iconName={faWhatsapp}
                   size="xl"
-                  className="hover:bg-[#DAD6CF] hover:animate-pulse rounded-full transition duration-300 px-1 py-2"
+                  className="hover:bg-[#DAD6CF] hover:text-black hover:animate-pulse rounded-full transition duration-300 px-1 py-2"
                 />
               </Link>
               <Link
@@ -135,14 +135,14 @@ export default function ContactUs() {
                 <Icon
                   iconName={faInstagram}
                   size="xl"
-                  className="hover:bg-[#DAD6CF] hover:animate-pulse rounded-full transition duration-300 px-1 py-2"
+                  className="hover:bg-[#DAD6CF] hover:text-black hover:animate-pulse rounded-full transition duration-300 px-1 py-2"
                 />
               </Link>
               <Link href="mailto:farshadniakimia@gmail.com">
                 <Icon
                   iconName={faEnvelope}
                   size="xl"
-                  className="hover:bg-[#DAD6CF] hover:animate-pulse rounded-full transition duration-300 px-1 py-2"
+                  className="hover:bg-[#DAD6CF] hover:text-black hover:animate-pulse rounded-full transition duration-300 px-1 py-2"
                 />
               </Link>
             </div>

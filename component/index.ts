@@ -9,3 +9,4 @@ export { ParallaxSection } from "./home/ParallaxSection";
 export { MostLovedSection } from "./home/MostLovedSection";
 export { AboutUs } from "./home/AboutUs";
 export { ProductCard } from "./ui/ProductCard";
+export { Pagination } from "./ui/Pagination";

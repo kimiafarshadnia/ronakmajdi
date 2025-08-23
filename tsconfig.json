@@ -20,10 +20,10 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/constant/*":["./constant/*"],
-      "@/types/*":["./types/*"],
-      "@/component/*":["./component/*"],
-      "@/data/*":["./data/*"]
+      "@/constant/*": ["./constant/*"],
+      "@/types/*": ["./types/*"],
+      "@/component/*": ["./component/*"],
+      "@/data/*": ["./data/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

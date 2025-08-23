@@ -111,7 +111,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-background sticky top-0 z-50">
+    <header className="bg-black sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex flex-row items-center justify-between">
         {/* Mobile Toggle */}
         <div className="md:hidden">
@@ -217,10 +217,10 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-3">
-          <Link href="/">
+          <Link href="/" className="hover:scale-130 duration-300">
             <Icon iconName={faWhatsapp} size="lg" />
           </Link>
-          <Link href="/">
+          <Link href="/" className="hover:scale-130 duration-300">
             <Icon iconName={faInstagram} size="lg" />
           </Link>
         </div>

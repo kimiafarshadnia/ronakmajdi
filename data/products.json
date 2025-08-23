@@ -43,5 +43,50 @@
     "price": 2200000,
     "image": "/images/product1.webp",
     "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+  },
+  {
+    "id": 6,
+    "slug": "long-coat",
+    "title": "مانتوی بلند",
+    "category": "skirt",
+    "price": 2200000,
+    "image": "/images/product1.webp",
+    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+  },
+  {
+    "id": 7,
+    "slug": "long-coat",
+    "title": "مانتوی بلند",
+    "category": "skirt",
+    "price": 2200000,
+    "image": "/images/product1.webp",
+    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+  },
+  {
+    "id": 8,
+    "slug": "long-coat",
+    "title": "مانتوی بلند",
+    "category": "skirt",
+    "price": 2200000,
+    "image": "/images/product1.webp",
+    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+  },
+  {
+    "id": 9,
+    "slug": "long-coat",
+    "title": "مانتوی بلند",
+    "category": "skirt",
+    "price": 2200000,
+    "image": "/images/product1.webp",
+    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+  },
+  {
+    "id": 10,
+    "slug": "long-coat",
+    "title": "مانتوی بلند",
+    "category": "skirt",
+    "price": 2200000,
+    "image": "/images/product1.webp",
+    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
   }
 ]
