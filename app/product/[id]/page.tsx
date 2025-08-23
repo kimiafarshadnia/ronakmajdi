@@ -1,3 +1,5 @@
+"use client";
+
 import products from "@/data/products.json";
 import Image from "next/image";
 
