@@ -1,7 +1,8 @@
-"use client";
+"use client"; // صفحه client component شود
 
 import products from "@/data/products.json";
 import Image from "next/image";
+import { use } from "react";
 
 function getProduct(id: number) {
   const product = products.find((p) => p.id === id);
@@ -9,12 +10,9 @@ function getProduct(id: number) {
   return product;
 }
 
-export default function ProductDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const productId = parseInt(params.id, 10);
+export default function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params); // unwrap کردن Promise
+  const productId = parseInt(id, 10);
   if (isNaN(productId)) throw new Error("Invalid product ID");
 
   const product = getProduct(productId);
@@ -26,6 +24,8 @@ export default function ProductDetailPage({
           src={product.image}
           alt={product.title}
           className="w-full rounded-lg shadow-md"
+          width={500}
+          height={500}
         />
 
         <div className="text-right">
