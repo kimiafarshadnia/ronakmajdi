@@ -29,7 +29,7 @@ export const MostLovedSection = () => {
   return (
     <div ref={ref} className="w-full bg-white py-12">
       <div className="container mx-auto px-4 w-full flex flex-col items-center gap-5">
-        <h2 className="text-center text-4xl mb-5 text-black">محبوب ترین ها</h2>
+        <h2 className="text-center text-3xl sm:text-4xl mb-5 text-black">محبوب ترین ها</h2>
         <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 place-items-center">
           {products.map((product, index) => (
             <motion.div
@@ -40,7 +40,7 @@ export const MostLovedSection = () => {
               variants={itemVariants}
               className="group relative cursor-pointer overflow-hidden transition-all duration-300 flex flex-col items-center justify-center gap-4 w-full"
             >
-              <div className="relative w-full h-96 overflow-hidden">
+              <div className="relative w-full h-60 md:h-72 lg:h-96 overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.title}

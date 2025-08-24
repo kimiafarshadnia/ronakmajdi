@@ -24,12 +24,12 @@ export const HeroSection = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 120 }}
-            className="w-full flex items-center justify-center mb-4"
+            className="flex items-center justify-center mb-4 h-[150px] md:h-[180px]"
           >
             <img
               src="/images/logo-white.svg"
               alt="Logo"
-              className="w-[180px] md:w-[220px] h-auto object-contain"
+              className="w-full h-full object-contain"
             />
           </motion.div>
 

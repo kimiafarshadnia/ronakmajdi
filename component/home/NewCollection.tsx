@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const products = [
-  { id: 1, title: "کت دارسا", image: "/images/hero.webp", price: "1,200" },
+  { id: 1, title: "کت دارسا", image: "/images/product2.webp", price: "1,200" },
   { id: 2, title: "کت دارسا", image: "/images/seaDress.webp", price: "1,200" },
   { id: 3, title: "کت دارسا", image: "/images/product2.webp", price: "1,200" },
   { id: 4, title: "کت دارسا", image: "/images/daman.webp", price: "1,200" },
@@ -14,8 +14,8 @@ const products = [
 
 export const NewCollection = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // فقط یک بار انیمیشن فعال بشه
-    threshold: 0.2,   // وقتی ۲۰٪ از سکشن داخل ویو شد
+    triggerOnce: true,
+    threshold: 0.2,
   });
 
   return (
@@ -25,7 +25,7 @@ export const NewCollection = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
-          className="text-center text-4xl mb-5 text-black"
+          className="text-center text-3xl sm:text-4xl mb-5 text-black"
         >
           کالکشن نو ، استایل نو
         </motion.h2>
@@ -40,7 +40,7 @@ export const NewCollection = () => {
               whileHover={{ scale: 1.05 }}
               className="group relative cursor-pointer overflow-hidden transition-all duration-300 flex flex-col items-center justify-center gap-4 w-full"
             >
-              <div className="relative w-full h-96 overflow-hidden rounded-lg shadow-lg">
+              <div className="relative w-full h-60 md:h-72 lg:h-96 overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.title}

@@ -30,7 +30,7 @@ function RenderSubMenu({
 
   if (mobile) {
     return (
-      <ul className="pl-4">
+      <ul>
         {items.map((item) => (
           <li key={item.title} className="mb-2">
             <div className="flex justify-between items-center">
@@ -131,7 +131,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed top-0 left-0 w-64 h-full bg-black shadow-lg z-50 p-6 overflow-y-auto md:hidden"
+              className="fixed top-0 left-0 w-52 sm:w-64 h-full bg-black shadow-lg z-50 p-6 overflow-y-auto md:hidden"
             >
               {/* Logo */}
               <div className="mb-6 flex justify-center shrink-0 h-10">
@@ -205,7 +205,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="flex justify-center items-center shrink-0 ">
+        <div className="flex justify-center items-center shrink-0 w-[120px] sm:w-[150px]">
           <Link href="/">
             <img
               src="/images/nameLogo-white.svg"

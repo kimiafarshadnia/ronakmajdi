@@ -10,7 +10,7 @@ export const AboutUs = () => {
   });
 
   return (
-    <section ref={ref} className="container mx-auto px-4 py-20">
+    <section ref={ref} className="container mx-auto px-4 py-12">
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-12">
         {/* متن سمت راست */}
         <motion.div
@@ -48,9 +48,9 @@ export const AboutUs = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 1 }}
-          className="relative border flex justify-end"
+          className="relative border flex justify-start"
         >
-          <div className="w-full lg:w-[350px] h-[450px] relative top-5 left-5">
+          <div className="w-[250px] h-[300px] md:w-[350px] md:h-[420px] relative top-2 left-2 sm:top-5 sm:left-5">
             <img
               src="images/tarika.webp"
               className="w-full h-full object-cover"

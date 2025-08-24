@@ -49,7 +49,7 @@ export const FAQSection = () => {
               onClick={() => toggleFAQ(index)}
               className="w-full flex justify-between items-center p-4 text-right cursor-pointer"
             >
-              <span className="text-lg">{faq.question}</span>
+              <span className="text-sm sm:text-base">{faq.question}</span>
               <Icon
                 iconName={openIndex === index ? faChevronUp : faChevronDown}
               />
@@ -63,7 +63,7 @@ export const FAQSection = () => {
               }`}
             >
               <div className="overflow-hidden">
-                <div className="p-4 text-gray-400 leading-relaxed">
+                <div className="p-4 text-xs sm:text-sm text-gray-400 leading-relaxed">
                   {faq.answer}
                 </div>
               </div>

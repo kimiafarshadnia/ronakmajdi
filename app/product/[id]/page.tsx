@@ -1,4 +1,4 @@
-"use client"; // صفحه client component شود
+"use client";
 
 import products from "@/data/products.json";
 import Image from "next/image";
@@ -11,7 +11,7 @@ function getProduct(id: number) {
 }
 
 export default function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params); // unwrap کردن Promise
+  const { id } = use(params);
   const productId = parseInt(id, 10);
   if (isNaN(productId)) throw new Error("Invalid product ID");
 
