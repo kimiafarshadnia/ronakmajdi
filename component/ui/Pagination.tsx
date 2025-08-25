@@ -1,12 +1,11 @@
-// components/Pagination.tsx
 import React from "react";
 
 interface PaginationProps {
-  currentPage: number;            // Safheye feli
-  totalPages: number;             // Kole safha
-  onPageChange: (page: number) => void; // Function baraye handle kardan taghir safhe
-  siblingCount?: number;          // tedad page haye niazmand ghabl va bad (default 1)
-  className?: string;             // baraye style dadan extra
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+  siblingCount?: number;
+  className?: string;
 }
 
 export const Pagination: React.FC<PaginationProps> = ({
@@ -24,10 +23,10 @@ export const Pagination: React.FC<PaginationProps> = ({
     const startPage = Math.max(2, currentPage - siblingCount);
     const endPage = Math.min(totalPages - 1, currentPage + siblingCount);
 
-    pages.push(1); // Safheye aval
+    pages.push(1);
 
     if (startPage > 2) {
-      pages.push("..."); // gap
+      pages.push("...");
     }
 
     for (let i = startPage; i <= endPage; i++) {
@@ -35,11 +34,11 @@ export const Pagination: React.FC<PaginationProps> = ({
     }
 
     if (endPage < totalPages - 1) {
-      pages.push("..."); // gap
+      pages.push("...");
     }
 
     if (totalPages > 1) {
-      pages.push(totalPages); // Safheye akhar
+      pages.push(totalPages);
     }
 
     return pages;
@@ -54,7 +53,7 @@ export const Pagination: React.FC<PaginationProps> = ({
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
-       قبلی
+        قبلی
       </button>
 
       {pages.map((page, idx) =>

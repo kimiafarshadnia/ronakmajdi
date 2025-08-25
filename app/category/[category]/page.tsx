@@ -1,8 +1,17 @@
 "use client";
 
-import { useState, use } from "react";
+import { use, useState } from "react";
+import { motion } from "framer-motion";
 import { Pagination, ProductCard } from "@/component";
 import productsData from "@/data/products.json";
+
+const categoryBackgrounds: Record<string, string> = {
+  pants: "/images/shalvar.jpeg",
+  shomise: "/images/clothes.jpeg",
+  sets: "/images/heroImage.webp",
+  jackets:"/images/manto.jpg"
+  // بقیه دسته‌ها رو اضافه کن
+};
 
 function getProducts(category: string) {
   return category ? productsData.filter((p) => p.category === category) : productsData;
@@ -23,27 +32,52 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
     page * itemsPerPage
   );
 
+  const containerVariants = {
+    hidden: {},
+    visible: { 
+      transition: { staggerChildren: 0.05 }
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
+
+  const backgroundImage = categoryBackgrounds[category] || "/images/heroImage.webp";
+
   return (
     <section>
-      <div
-        className="relative w-full h-[170px] sm:h-[300px] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/heroImage.webp')" }}
+      <motion.div
+        className="relative w-full h-[170px] sm:h-[250px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <h2 className="relative z-10 flex items-center justify-center h-full text-3xl font-bold">
           {category}
         </h2>
-      </div>
+      </motion.div>
 
       <div className="container mx-auto px-4 py-10">
         {displayedProducts.length === 0 ? (
           <p>محصولی در این دسته موجود نیست.</p>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            key={page} // page change triggers animation
+          >
             {displayedProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <motion.div key={product.id} variants={itemVariants}>
+                <ProductCard product={product} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
 
         {totalPages > 1 && (

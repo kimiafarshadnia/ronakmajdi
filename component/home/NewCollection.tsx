@@ -19,7 +19,7 @@ export const NewCollection = () => {
   });
 
   return (
-    <div ref={ref} className="w-full bg-white py-12">
+    <div ref={ref} className="w-full bg-[#E5E1DA] py-12">
       <div className="container mx-auto px-4 w-full flex flex-col items-center gap-5">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
@@ -49,7 +49,9 @@ export const NewCollection = () => {
                 />
               </div>
               <div className="flex flex-col items-center gap-1 text-black">
-                <span className="text-sm sm:text-base font-medium">{product.title}</span>
+                <span className="text-sm sm:text-base font-medium">
+                  {product.title}
+                </span>
                 <span className="font-light">{`${product.price} ت`}</span>
               </div>
             </motion.div>

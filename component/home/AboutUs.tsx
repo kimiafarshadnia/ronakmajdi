@@ -12,7 +12,6 @@ export const AboutUs = () => {
   return (
     <section ref={ref} className="container mx-auto px-4 py-12">
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-12">
-        {/* متن سمت راست */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}

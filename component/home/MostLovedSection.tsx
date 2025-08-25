@@ -27,9 +27,11 @@ export const MostLovedSection = () => {
   };
 
   return (
-    <div ref={ref} className="w-full bg-white py-12">
+    <div ref={ref} className="w-full bg-[#E5E1DA] py-12">
       <div className="container mx-auto px-4 w-full flex flex-col items-center gap-5">
-        <h2 className="text-center text-3xl sm:text-4xl mb-5 text-black">محبوب ترین ها</h2>
+        <h2 className="text-center text-3xl sm:text-4xl mb-5 text-black">
+          محبوب ترین ها
+        </h2>
         <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 place-items-center">
           {products.map((product, index) => (
             <motion.div

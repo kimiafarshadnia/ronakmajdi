@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 py-12">
       <Image
-        src="/images/404.png" // 👈 اگر نداری، بگو تا پیشنهاد بدم یا برات بسازم
+        src="/images/404.webp"
         alt="صفحه مورد نظر یافت نشد"
         width={300}
         height={300}
@@ -20,7 +20,7 @@ export default function NotFound() {
 
       <Link
         href="/"
-        className="px-6 py-3 bg-black text-white rounded-full text-sm hover:bg-gray-800 transition"
+        className="px-6 py-3 bg-black text-white border rounded-full text-sm hover:bg-[#E5E1DA] hover:text-black transition"
       >
         بازگشت به صفحه اصلی
       </Link>
