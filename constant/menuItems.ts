@@ -6,7 +6,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     title: "محصولات",
-    href: "/category",
+    href: "",
     sub: [
       {
         title: "ست ها",

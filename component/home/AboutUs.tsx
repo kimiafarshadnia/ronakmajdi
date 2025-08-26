@@ -51,7 +51,7 @@ export const AboutUs = () => {
         >
           <div className="w-[250px] h-[300px] md:w-[350px] md:h-[420px] relative top-2 left-2 sm:top-5 sm:left-5">
             <img
-              src="images/tarika.webp"
+              src="/images/tarika.webp"
               className="w-full h-full object-cover"
             />
           </div>
