@@ -9,17 +9,17 @@ const categoryBackgrounds: Record<string, string> = {
   pants: "/images/shalvar.jpeg",
   shomise: "/images/clothes.jpeg",
   sets: "/images/heroImage.webp",
-  jackets:"/images/manto.jpg"
-  // بقیه دسته‌ها رو اضافه کن
+  jackets:"/images/manto.jpg",
+  belt:"/images/heroImage.webp",
 };
 
-function getProducts(category: string) {
-  return category ? productsData.filter((p) => p.category === category) : productsData;
+function getProducts(categoryPath: string[]) {
+  const lastCategory = categoryPath[categoryPath.length - 1];
+  return productsData.filter((p) => p.category === lastCategory);
 }
 
-export default function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
+export default function CategoryPage({ params }: { params: Promise<{ category: string[] }> }) {
   const { category } = use(params);
-
   const allProducts = getProducts(category);
 
   const itemsPerPage = 8; 
@@ -44,8 +44,8 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
 
-  const backgroundImage = categoryBackgrounds[category] || "/images/heroImage.webp";
-
+  const lastCategory = category[category.length - 1];
+const backgroundImage = categoryBackgrounds[lastCategory] || "/images/heroImage.webp";
   return (
     <section>
       <motion.div
@@ -70,7 +70,7 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            key={page} // page change triggers animation
+            key={page}
           >
             {displayedProducts.map((product) => (
               <motion.div key={product.id} variants={itemVariants}>

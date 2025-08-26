@@ -177,13 +177,13 @@ export default function Header() {
                       isActive ? "text-white" : "text-white/70 hover:text-white"
                     }`}
                   >
+                    {item.title}
                     {item.sub && (
                       <Icon
                         iconName={faChevronDown}
                         className="text-xs mt-[2px]"
                       />
                     )}
-                    {item.title}
                   </Link>
 
                   {/* Dropdown Submenu */}

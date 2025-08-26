@@ -30,8 +30,11 @@ export const menuItems: MenuItem[] = [
       },
       {
         title: "اکسسوری‌ها",
-        href: "/category/accessories",
-        sub: [{ title: "شال و روسری", href: "/category/accessories/scarves" }],
+        href: "",
+        sub: [
+          { title: "شال و روسری", href: "/category/accessories/scarves" },
+          { title: "کمربند", href: "/category/accessories/belt" },
+        ],
       },
     ],
   },
