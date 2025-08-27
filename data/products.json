@@ -10,7 +10,7 @@
       "سفید"
     ],
     "coverImage": "/images/product1.webp",
-    "type":"نخ لنین",
+    "type": "نخ لنین",
     "gallery": [
       "/images/product1.webp",
       "/images/product1.webp",
@@ -28,12 +28,10 @@
       "آبی"
     ],
     "sizes": [
-      "xs",
-      "m",
-      "l",
-      "xl"
+      1,
+      2
     ],
-    "type":"نخ لنین",
+    "type": "نخ لنین",
     "coverImage": "/images/product1.webp",
     "gallery": [
       "/images/product1.webp",
@@ -54,7 +52,7 @@
       "/images/product1.webp",
       "/images/product1.webp"
     ],
-    "type":"نخ لنین",
+    "type": "نخ لنین",
     "description": "مانتوی بلند شیک و مناسب فصل پاییز."
   },
   {
@@ -69,7 +67,7 @@
       "/images/product1.webp",
       "/images/product1.webp"
     ],
-    "type":"نخ لنین",
+    "type": "نخ لنین",
     "description": "مانتوی بلند شیک و مناسب فصل پاییز."
   },
   {
@@ -84,7 +82,10 @@
       "/images/product1.webp",
       "/images/product1.webp"
     ],
-    "type":"نخ لنین",
+    "sizes": [
+      1, 2
+    ],
+    "type": "نخ لنین",
     "description": "مانتوی بلند شیک و مناسب فصل پاییز."
   }
 ]
