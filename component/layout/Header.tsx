@@ -30,7 +30,7 @@ function RenderSubMenu({
 
   if (mobile) {
     return (
-      <ul>
+      <ul className="pr-3">
         {items.map((item) => (
           <li key={item.title} className="mb-2">
             <div className="flex justify-between items-center">
