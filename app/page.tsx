@@ -1,32 +1,19 @@
 import {
   BackToTopButton,
-  Divider,
   FAQSection,
   HeroSection,
-  MostLovedSection,
-  NewCollection,
   ParallaxSection,
   AboutUs,
+  RandomProduct,
 } from "@/component";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-items-center  min-h-screen">
+    <div className="flex flex-col items-center justify-items-center min-h-screen">
       <HeroSection />
-      {/* <Divider
-        logos={[
-          "/images/logo.svg",
-          "/images/nameLogo.svg",
-          "/images/logo.svg",
-          "/images/nameLogo.svg",
-          "/images/logo.svg",
-          "/images/nameLogo.svg",
-          "/images/logo.svg",
-        ]}
-      /> */}
-      <NewCollection />
+      <RandomProduct title="کالکشن نو ، استایل نو" bgColor="bg-[#E5E1DA]" textColor="text-black"/>
       <AboutUs />
-      <MostLovedSection />
+      <RandomProduct title="محبوب ترین ها" bgColor="bg-[#E5E1DA]" textColor="text-black"/>
       <ParallaxSection />
       <FAQSection />
       <BackToTopButton />

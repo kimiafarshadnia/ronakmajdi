@@ -1,10 +1,9 @@
 "use client";
 
 import { use } from "react";
-import ProductGallery from "@/component/ui/ProductGallery";
-import products from "@/data/products.json";
 import { motion } from "framer-motion";
-import { p } from "framer-motion/client";
+import products from "@/data/products.json";
+import { ProductGallery, RandomProduct } from "@/component";
 
 function getProduct(id: number) {
   const product = products.find((p) => p.id === id);
@@ -23,18 +22,10 @@ export default function ProductDetailPage({
 
   const product = getProduct(productId);
 
-  const images =
-    Array.isArray(product.gallery) && product.gallery.length
-      ? product.gallery
-      : product.gallery
-      ? [product.gallery]
-      : [];
-
   return (
     <section className="container mx-auto px-4 py-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
         <ProductGallery gallery={product.gallery ?? []} />
-
         <motion.div
           className="text-right flex flex-col justify-between"
           initial={{ opacity: 0, x: 50 }}
@@ -42,16 +33,15 @@ export default function ProductDetailPage({
           transition={{ duration: 0.5 }}
         >
           <div className="flex flex-col gap-5">
-            <h1 className="text-3xl md:text-4xl font-bold">{product.title}</h1>
+            <h1 className="text-3xl md:text-4xl">{product.title}</h1>
             <p className="mb-6">{product.description}</p>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <p>قیمت :</p>
-              <span className="font-semibold">
-                {product.price.toLocaleString()} تومان
-              </span>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <p>سایز بندی :</p>
+
+            <span className="font-semibold text-2xl">
+              {product.price.toLocaleString()} تومان
+            </span>
+
+            <div className="flex flex-col gap-2">
+              <p>سایز</p>
               {product.sizes ? (
                 <ul className="flex items-center gap-2">
                   {product.sizes.map((s, i) => (
@@ -67,8 +57,9 @@ export default function ProductDetailPage({
                 <p>فری سایز هست و سایزبندی ندارد</p>
               )}
             </div>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <p>رنگ بندی :</p>
+
+            <div className="flex flex-col gap-2">
+              <p>رنگ</p>
               {product.colors ? (
                 <ul className="flex items-center gap-2">
                   {product.colors.map((c, i) => (
@@ -76,7 +67,7 @@ export default function ProductDetailPage({
                   ))}
                 </ul>
               ) : (
-                <p>رنگ بندی ندارد</p>
+                <p>تک رنگ</p>
               )}
             </div>
           </div>
@@ -91,6 +82,7 @@ export default function ProductDetailPage({
           </button>
         </motion.div>
       </div>
+      <RandomProduct title="محصولات بازدید شده اخیر" />
     </section>
   );
 }

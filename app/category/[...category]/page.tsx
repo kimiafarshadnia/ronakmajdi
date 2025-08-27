@@ -2,15 +2,15 @@
 
 import { use, useState } from "react";
 import { motion } from "framer-motion";
-import { Pagination, ProductCard } from "@/component";
 import productsData from "@/data/products.json";
+import { NoItem, Pagination, ProductCard } from "@/component";
 
 const categoryBackgrounds: Record<string, string> = {
   pants: "/images/shalvar.jpeg",
   shomise: "/images/clothes.jpeg",
   sets: "/images/heroImage.webp",
-  jackets:"/images/manto.jpg",
-  belt:"/images/heroImage.webp",
+  jackets: "/images/manto.jpg",
+  belt: "/images/heroImage.webp",
 };
 
 function getProducts(categoryPath: string[]) {
@@ -18,11 +18,15 @@ function getProducts(categoryPath: string[]) {
   return productsData.filter((p) => p.category === lastCategory);
 }
 
-export default function CategoryPage({ params }: { params: Promise<{ category: string[] }> }) {
+export default function CategoryPage({
+  params,
+}: {
+  params: Promise<{ category: string[] }>;
+}) {
   const { category } = use(params);
   const allProducts = getProducts(category);
 
-  const itemsPerPage = 8; 
+  const itemsPerPage = 8;
   const totalPages = Math.ceil(allProducts.length / itemsPerPage);
 
   const [page, setPage] = useState(1);
@@ -34,8 +38,8 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
 
   const containerVariants = {
     hidden: {},
-    visible: { 
-      transition: { staggerChildren: 0.05 }
+    visible: {
+      transition: { staggerChildren: 0.05 },
     },
   };
 
@@ -45,7 +49,8 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
   };
 
   const lastCategory = category[category.length - 1];
-const backgroundImage = categoryBackgrounds[lastCategory] || "/images/heroImage.webp";
+  const backgroundImage =
+    categoryBackgrounds[lastCategory] || "/images/heroImage.webp";
   return (
     <section>
       <motion.div
@@ -63,7 +68,7 @@ const backgroundImage = categoryBackgrounds[lastCategory] || "/images/heroImage.
 
       <div className="container mx-auto px-4 py-10">
         {displayedProducts.length === 0 ? (
-          <p>محصولی در این دسته موجود نیست.</p>
+          <NoItem />
         ) : (
           <motion.div
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"

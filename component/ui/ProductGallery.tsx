@@ -7,8 +7,18 @@ type Props = {
   gallery: string[];
 };
 
-export default function ProductGallery({ gallery }: Props) {
+type ZoomStyle = {
+  backgroundSize: string;
+  backgroundPosition: string;
+};
+
+export const ProductGallery = ({ gallery }: Props) => {
   const [selected, setSelected] = useState(0);
+
+  const [zoomStyle, setZoomStyle] = useState<ZoomStyle>({
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+  });
 
   if (!gallery || gallery.length === 0) {
     return (
@@ -20,11 +30,29 @@ export default function ProductGallery({ gallery }: Props) {
 
   if (gallery.length === 1) {
     return (
-      <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center">
-        <img
-          src={gallery[0]}
-          alt="Product"
-          className="object-contain w-full h-full rounded-lg shadow-md"
+      <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px]">
+        <div
+          className="w-full h-full rounded-lg shadow-md bg-no-repeat bg-center"
+          style={{
+            backgroundImage: `url(${gallery[0]})`,
+            ...zoomStyle,
+          }}
+          onMouseMove={(e) => {
+            const { left, top, width, height } =
+              e.currentTarget.getBoundingClientRect();
+            const x = ((e.pageX - left) / width) * 100;
+            const y = ((e.pageY - top) / height) * 100;
+            setZoomStyle({
+              backgroundSize: "200%", // میزان زوم
+              backgroundPosition: `${x}% ${y}%`,
+            });
+          }}
+          onMouseLeave={() =>
+            setZoomStyle({
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+            })
+          }
         />
       </div>
     );
@@ -32,14 +60,32 @@ export default function ProductGallery({ gallery }: Props) {
 
   return (
     <div className="w-full">
-      {/* تصویر اصلی */}
+      {/* تصویر اصلی با زوم */}
       <div className="w-full h-[400px] sm:h-[500px] lg:h-[600px] mb-4 relative">
         <AnimatePresence mode="wait">
-          <motion.img
+          <motion.div
             key={selected}
-            src={gallery[selected]}
-            alt={`Product ${selected + 1}`}
-            className="object-contain w-full h-full rounded-lg shadow-md"
+            className="w-full h-full rounded-lg shadow-md bg-no-repeat bg-center"
+            style={{
+              backgroundImage: `url(${gallery[selected]})`,
+              ...zoomStyle,
+            }}
+            onMouseMove={(e) => {
+              const { left, top, width, height } =
+                e.currentTarget.getBoundingClientRect();
+              const x = ((e.pageX - left) / width) * 100;
+              const y = ((e.pageY - top) / height) * 100;
+              setZoomStyle({
+                backgroundSize: "200%", // زوم ۲ برابر
+                backgroundPosition: `${x}% ${y}%`,
+              });
+            }}
+            onMouseLeave={() =>
+              setZoomStyle({
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+              })
+            }
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -48,12 +94,18 @@ export default function ProductGallery({ gallery }: Props) {
         </AnimatePresence>
       </div>
 
-      {/* Thumbnails */}
+      {/* تصاویر بندانگشتی */}
       <div className="flex gap-3 overflow-x-auto">
         {gallery.map((img, idx) => (
           <button
             key={idx}
-            onClick={() => setSelected(idx)}
+            onClick={() => {
+              setSelected(idx);
+              setZoomStyle({
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+              });
+            }}
             className={`flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-lg border-2 ${
               selected === idx ? "border-blue-500" : "border-gray-300"
             } overflow-hidden`}
@@ -68,4 +120,4 @@ export default function ProductGallery({ gallery }: Props) {
       </div>
     </div>
   );
-}
+};

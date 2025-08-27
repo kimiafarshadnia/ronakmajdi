@@ -12,5 +12,6 @@ export type Product = {
   sizes?: string[];
   coverImage: string;
   gallery?: string[];
+  type:string;
   description: string;
 };

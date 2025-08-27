@@ -3,14 +3,24 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Product } from "@/types";
+import { useRouter } from "next/navigation";
 
 type Props = {
   product: Product;
 };
 
 export const ProductCard = ({ product }: Props) => {
+  const router = useRouter();
+  
+  const goToProductPage = (id: number) => {
+    router.push(`/product/${id}`);
+
+  };
   return (
-    <div className="bg-[#111111] shadow-sm overflow-hidden hover:shadow-md transition p-2">
+    <div
+      onClick={() => goToProductPage(product.id)}
+      className="bg-[#111111] shadow-sm overflow-hidden hover:shadow-md transition p-2"
+    >
       <Image
         src={product.coverImage}
         alt={product.title}
@@ -21,9 +31,7 @@ export const ProductCard = ({ product }: Props) => {
       <div className="flex flex-col justify-center gap-5 pb-3 md:pb-0">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs min-[500px]:text-base">
           <h3 className="text-start">{product.title}</h3>
-          <p className="text-[#E5E1DA] text-end">
-            {product.price} تومان
-          </p>
+          <p className="text-[#E5E1DA] text-end">{product.price} تومان</p>
         </div>
         <Link
           href={`/product/${product.id}`}

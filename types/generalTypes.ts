@@ -3,3 +3,12 @@ export type MenuItem = {
   href: string;
   sub?: MenuItem[];
 };
+
+
+export interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+  siblingCount?: number;
+  className?: string;
+}
