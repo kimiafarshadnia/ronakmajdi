@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "slug": "black-dress",
     "title": "پیراهن مشکی",
     "category": "skirt",
@@ -19,7 +19,7 @@
     "description": "پیراهن مشکی ساده و لوکس برای مجالس رسمی."
   },
   {
-    "id": 2,
+    "id": "2",
     "slug": "white-shirt",
     "title": "پیراهن سفید",
     "category": "skirt",
@@ -41,7 +41,7 @@
     "description": "پیراهن سفید کلاسیک مناسب استفاده روزمره."
   },
   {
-    "id": 3,
+    "id": "3",
     "slug": "long-coat",
     "title": "مانتوی بلند",
     "category": "skirt",
@@ -56,7 +56,7 @@
     "description": "مانتوی بلند شیک و مناسب فصل پاییز."
   },
   {
-    "id": 4,
+    "id": "4",
     "slug": "long-coat",
     "title": "مانتوی بلند",
     "category": "skirt",
@@ -71,7 +71,7 @@
     "description": "مانتوی بلند شیک و مناسب فصل پاییز."
   },
   {
-    "id": 5,
+    "id": "5",
     "slug": "long-coat",
     "title": "مانتوی بلند",
     "category": "skirt",

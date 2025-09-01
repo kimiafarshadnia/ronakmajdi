@@ -1,11 +1,12 @@
 "use client";
 
+import { use } from "react";
 import { motion } from "framer-motion";
 import products from "@/data/products.json";
 import { ProductGallery, RandomProduct } from "@/component";
 
-function getProduct(id: number) {
-  const product = products.find((p) => p.id === id);
+function getProduct(id: string) {
+  const product = products.find((p) => p.id.toString() === id);
   if (!product) throw new Error("Product not found");
   return product;
 }
@@ -13,12 +14,12 @@ function getProduct(id: number) {
 export default function ProductDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const productId = parseInt(params.id, 10);
-  if (isNaN(productId)) throw new Error("Invalid product ID");
+  const { id } = use(params);
+  if (!id) throw new Error("Invalid product ID");
 
-  const product = getProduct(productId);
+  const product = getProduct(id);
 
   return (
     <section className="container mx-auto px-4 py-10">
