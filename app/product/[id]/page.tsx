@@ -1,6 +1,5 @@
 "use client";
 
-import { use } from "react";
 import { motion } from "framer-motion";
 import products from "@/data/products.json";
 import { ProductGallery, RandomProduct } from "@/component";
@@ -14,10 +13,9 @@ function getProduct(id: number) {
 export default function ProductDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const { id } = use(params);
-  const productId = parseInt(id, 10);
+  const productId = parseInt(params.id, 10);
   if (isNaN(productId)) throw new Error("Invalid product ID");
 
   const product = getProduct(productId);
