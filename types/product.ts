@@ -1,7 +1,3 @@
-export type ProductCardProps = {
-  product: Product;
-};
-
 export type Product = {
   id: number;
   slug: string;
@@ -9,7 +5,7 @@ export type Product = {
   category: string;
   price: number;
   colors?: string[];
-  sizes?: string[];
+  sizes?: number[];
   coverImage: string;
   gallery?: string[];
   type:string;
