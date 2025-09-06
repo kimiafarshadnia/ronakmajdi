@@ -51,8 +51,8 @@ export default function ProductDetailPage({
                       className="h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
                     >
                       {s === 1
-                        ? `${s}مناسب سایز ۳۸ تا  ۴۲`
-                        : `مناسب سایز ۴۲ تا ۴۶ ${s}`}
+                        ? `${s} مناسب سایز ۳۸ تا  ۴۲`
+                        : `${s} مناسب سایز ۴۲ تا ۴۶`}
                     </li>
                   ))}
                 </ul>
@@ -65,7 +65,7 @@ export default function ProductDetailPage({
               <p>رنگ</p>
               <ul className="flex items-center gap-2">
                 {product.colors.map((c: string) => (
-                  <li key={c}>{c}</li>
+                  <li key={c} className="h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center">{c}</li>
                 ))}
               </ul>
             </div>

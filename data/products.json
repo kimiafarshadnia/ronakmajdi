@@ -37,13 +37,13 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/harir-gol.jpg",
+    "coverImage": "/images/dress/harir-gol.webp",
     "gallery": [
-      "/images/dress/harir-gol.jpg",
-      "/images/dress/harir-gol-g1.jpg",
-      "/images/dress/harir-gol-g2.jpg",
-      "/images/dress/harir-gol-g3.jpg",
-      "/images/dress/harir-gol-g4.jpg"
+      "/images/dress/harir-gol.webp",
+      "/images/dress/harir-gol-g1.webp",
+      "/images/dress/harir-gol-g2.webp",
+      "/images/dress/harir-gol-g3.webp",
+      "/images/dress/harir-gol-g4.webp"
     ],
     "description": "ستی که اینقدر ساده است که خاصه"
   },
@@ -61,12 +61,12 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/roma.jpg",
+    "coverImage": "/images/dress/roma.webp",
     "gallery": [
-      "/images/dress/roma.jpg",
-      "/images/dress/roma-g1.jpg",
-      "/images/dress/roma-g2.jpg",
-      "/images/dress/roma-g3.jpg"
+      "/images/dress/roma.webp",
+      "/images/dress/roma-g1.webp",
+      "/images/dress/roma-g2.webp",
+      "/images/dress/roma-g3.webp"
     ],
     "description": "یک ست مینیمال و مونوکروم با جنسی خنک و سبک"
   },
@@ -84,12 +84,12 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/lea.jpg",
+    "coverImage": "/images/dress/lea.webp",
     "gallery": [
-      "/images/dress/lea.jpg",
-      "/images/dress/lea-g1.jpg",
-      "/images/dress/lea-g2.jpg",
-      "/images/dress/lea-g3.jpg"
+      "/images/dress/lea.webp",
+      "/images/dress/lea-g1.webp",
+      "/images/dress/lea-g2.webp",
+      "/images/dress/lea-g3.webp"
     ],
     "description": "یکی از خاص ترین ست های لی که دیدین"
   },
@@ -107,12 +107,12 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/nightblue.jpg",
+    "coverImage": "/images/dress/nightblue.webp",
     "gallery": [
-      "/images/dress/nightblue.jpg",
-      "/images/dress/nightblue-g1.jpg",
-      "/images/dress/nightblue-g2.jpg",
-      "/images/dress/nightblue-g3.jpg"
+      "/images/dress/nightblue.webp",
+      "/images/dress/nightblue-g1.webp",
+      "/images/dress/nightblue-g2.webp",
+      "/images/dress/nightblue-g3.webp"
     ],
     "description": "یک ست فوق العاده راحت و آزاد با جنسی خنک و سبک"
   },
@@ -130,13 +130,13 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/swan.jpg",
+    "coverImage": "/images/dress/swan.webp",
     "gallery": [
-      "/images/dress/swan.jpg",
-      "/images/dress/swan-g1.jpg",
-      "/images/dress/swan-g2.jpg",
-      "/images/dress/swan-g3.jpg",
-      "/images/dress/swan-g4.jpg"
+      "/images/dress/swan.webp",
+      "/images/dress/swan-g1.webp",
+      "/images/dress/swan-g2.webp",
+      "/images/dress/swan-g3.webp",
+      "/images/dress/swan-g4.webp"
     ],
     "description": "کیوت ترین ست سه تیکه (کراپ، کت و شلوار) که میتونی داشته باشی"
   },
@@ -154,12 +154,12 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/afshan.jpg",
+    "coverImage": "/images/dress/afshan.webp",
     "gallery": [
-      "/images/dress/afshan.jpg",
-      "/images/dress/afshan-g1.jpg",
-      "/images/dress/afshan-g2.jpg",
-      "/images/dress/afshan-g3.jpg"
+      "/images/dress/afshan.webp",
+      "/images/dress/afshan-g1.webp",
+      "/images/dress/afshan-g2.webp",
+      "/images/dress/afshan-g3.webp"
     ],
     "description": "در بازی نور و پارچه افشان میدرخشد"
   },
@@ -177,11 +177,11 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/sahel.jpg",
+    "coverImage": "/images/dress/sahel.webp",
     "gallery": [
-      "/images/dress/sahel.jpg",
-      "/images/dress/sahel-g1.jpg",
-      "/images/dress/sahel-g2.jpg"
+      "/images/dress/sahel.webp",
+      "/images/dress/sahel-g1.webp",
+      "/images/dress/sahel-g2.webp"
     ],
     "description": "مناسب استایل های کژوآل و نیمه رسمی"
   },
@@ -199,12 +199,12 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/sea.jpg",
+    "coverImage": "/images/dress/sea.webp",
     "gallery": [
-      "/images/dress/sea.jpg",
-      "/images/dress/sea-g1.jpg",
-      "/images/dress/sea-g2.jpg",
-      "/images/dress/sea-g3.jpg"
+      "/images/dress/sea.webp",
+      "/images/dress/sea-g1.webp",
+      "/images/dress/sea-g2.webp",
+      "/images/dress/sea-g3.webp"
     ],
     "description": "مناسب روزای گرم، راحت و خنک"
   },
@@ -222,12 +222,57 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/whitepant.jpg",
+    "coverImage": "/images/dress/whitepant.webp",
     "gallery": [
-      "/images/dress/whitepant.jpg",
-      "/images/dress/whitepant-g1.jpg",
-      "/images/dress/whitepant-g2.jpg"
+      "/images/dress/whitepant.webp",
+      "/images/dress/whitepant-g1.webp",
+      "/images/dress/whitepant-g2.webp"
     ],
     "description": "مناسب روزای گرم، راحت و خنک"
+  },
+  {
+    "id": "11",
+    "slug": "cacaou",
+    "title": "ست کاکايو شاهانه",
+    "category": "sets",
+    "price": 2600000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/cacaou.webp",
+    "gallery": [
+      "/images/dress/cacaou.webp",
+      "/images/dress/cacaou-g1.webp",
+      "/images/dress/cacaou-g2.webp",
+      "/images/dress/cacaou-g3.webp"
+    ],
+    "description":"نه زیاد شلوغ ، نه زیاد ساده"
+  },
+  {
+    "id": "12",
+    "slug": "noora",
+    "title": "دامن سفید نورا",
+    "category": "skirt",
+    "price":980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "سفید"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/whiteskirt.webp",
+    "gallery": [
+      "/images/dress/whiteskirt.webp",
+      "/images/dress/whiteskirt-g1.webp",
+      "/images/dress/whiteskirt-g2.webp"
+    ],
+    "description":"نه زیاد شلوغ ، نه زیاد ساده"
   }
 ]
