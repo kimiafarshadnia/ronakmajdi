@@ -12,7 +12,7 @@ type Props = {
 export const ProductCard = ({ product }: Props) => {
   const router = useRouter();
   
-  const goToProductPage = (id: number) => {
+  const goToProductPage = (id: string) => {
     router.push(`/product/${id}`);
 
   };
@@ -22,7 +22,7 @@ export const ProductCard = ({ product }: Props) => {
       className="bg-[#111111] shadow-sm overflow-hidden hover:shadow-md transition p-2"
     >
       <Image
-        src={product.coverImage}
+        src={product.coverImage || "/placeholder.png"}
         alt={product.title}
         className="w-full sm:h-80 object-cover mb-5"
         width={250}
@@ -31,7 +31,7 @@ export const ProductCard = ({ product }: Props) => {
       <div className="flex flex-col justify-center gap-5 pb-3 md:pb-0">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs min-[500px]:text-base">
           <h3 className="text-start">{product.title}</h3>
-          <p className="text-[#E5E1DA] text-end">{product.price} تومان</p>
+          <p className="text-[#E5E1DA] text-end">{product.price?.toLocaleString()} تومان</p>
         </div>
         <Link
           href={`/product/${product.id}`}

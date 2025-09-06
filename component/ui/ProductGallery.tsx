@@ -45,7 +45,7 @@ export const ProductGallery = ({ gallery }: Props) => {
       </div>
 
       {gallery.length > 1 && (
-        <div className="flex flex-row sm:flex-col items-center justify-start gap-3 overflow-y-auto">
+        <div className="flex flex-row sm:flex-col items-center justify-start gap-3 overflow-y-scroll sm:h-[450px]">
           {gallery.map((img, idx) => (
             <button
               key={idx}

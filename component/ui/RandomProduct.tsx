@@ -37,7 +37,7 @@ export const RandomProduct = ({ title, bgColor, textColor }: Props) => {
     }),
   };
 
-  const goToThisProduct = (id: number) => {
+  const goToProductPage = (id: string) => {
     router.push(`/product/${id}`);
   };
   return (
@@ -63,12 +63,12 @@ export const RandomProduct = ({ title, bgColor, textColor }: Props) => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ scale: 1.05 }}
                 variants={itemVariants}
-                onClick={() => goToThisProduct(product.id)}
+                onClick={() => goToProductPage(product.id)}
                 className="group relative cursor-pointer overflow-hidden transition-all duration-300 flex flex-col items-center justify-center gap-4 w-full"
               >
                 <div className="relative w-full h-60 md:h-72 lg:h-96 overflow-hidden box-border">
                   <Image
-                    src={product.coverImage}
+                    src={product.coverImage || "/placeholder.png"}
                     alt={product.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -80,7 +80,7 @@ export const RandomProduct = ({ title, bgColor, textColor }: Props) => {
                   <span className="text-sm sm:text-base font-medium">
                     {product.title}
                   </span>
-                  <span className="font-light">{`${product.price} ت`}</span>
+                  <span className="font-light">{product.price?.toLocaleString()} تومان</span>
                 </div>
               </motion.div>
             ))}

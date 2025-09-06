@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { MainLayout } from "@/component/layout/MainLayout";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "روناک مجدی",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="fr" dir="rtl">
       <body>
         <MainLayout>{children}</MainLayout>
+        <Toaster position="top-center" />
       </body>
     </html>
   );

@@ -2,90 +2,232 @@
   {
     "id": "1",
     "slug": "black-dress",
-    "title": "پیراهن مشکی",
+    "title": "کفتان تابنا",
     "category": "skirt",
-    "price": 1200000,
-    "colors": [
-      "آبی",
-      "سفید"
-    ],
-    "coverImage": "/images/product1.webp",
-    "type": "نخ لنین",
+    "price": 2500000,
+    "coverImage": "/images/dress/kaftan.webp",
+    "type": "لینن وارداتی",
     "gallery": [
-      "/images/product1.webp",
-      "/images/product1.webp",
-      "/images/product1.webp"
-    ],
-    "description": "پیراهن مشکی ساده و لوکس برای مجالس رسمی."
-  },
-  {
-    "id": "2",
-    "slug": "white-shirt",
-    "title": "پیراهن سفید",
-    "category": "skirt",
-    "price": 850000,
-    "colors": [
-      "آبی"
+      "/images/dress/kaftan-g1.webp",
+      "/images/dress/kaftan-g2.webp",
+      "/images/dress/kaftan-g3.webp",
+      "/images/dress/kaftan-g4.webp",
+      "/images/dress/kaftan-g5.webp"
     ],
     "sizes": [
       1,
       2
     ],
-    "type": "نخ لنین",
-    "coverImage": "/images/product1.webp",
-    "gallery": [
-      "/images/product1.webp",
-      "/images/product1.webp",
-      "/images/product1.webp"
+    "colors": [
+      "تک رنگ"
     ],
-    "description": "پیراهن سفید کلاسیک مناسب استفاده روزمره."
+    "description": "بسیار خنک و خوش دوخت ، راحت و شیک"
+  },
+  {
+    "id": "2",
+    "slug": "harir-gol",
+    "title": "ست حریرگل",
+    "category": "sets",
+    "price": 2950000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/harir-gol.jpg",
+    "gallery": [
+      "/images/dress/harir-gol.jpg",
+      "/images/dress/harir-gol-g1.jpg",
+      "/images/dress/harir-gol-g2.jpg",
+      "/images/dress/harir-gol-g3.jpg",
+      "/images/dress/harir-gol-g4.jpg"
+    ],
+    "description": "ستی که اینقدر ساده است که خاصه"
   },
   {
     "id": "3",
-    "slug": "long-coat",
-    "title": "مانتوی بلند",
-    "category": "skirt",
-    "price": 2200000,
-    "coverImage": "/images/product1.webp",
-    "gallery": [
-      "/images/product1.webp",
-      "/images/product1.webp",
-      "/images/product1.webp"
+    "slug": "roma",
+    "title": "ست روما",
+    "category": "sets",
+    "price": 1700000,
+    "sizes": [
+      1,
+      2
     ],
-    "type": "نخ لنین",
-    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/roma.jpg",
+    "gallery": [
+      "/images/dress/roma.jpg",
+      "/images/dress/roma-g1.jpg",
+      "/images/dress/roma-g2.jpg",
+      "/images/dress/roma-g3.jpg"
+    ],
+    "description": "یک ست مینیمال و مونوکروم با جنسی خنک و سبک"
   },
   {
     "id": "4",
-    "slug": "long-coat",
-    "title": "مانتوی بلند",
-    "category": "skirt",
-    "price": 2200000,
-    "coverImage": "/images/product1.webp",
-    "gallery": [
-      "/images/product1.webp",
-      "/images/product1.webp",
-      "/images/product1.webp"
+    "slug": "selen",
+    "title": "ست سلن",
+    "category": "sets",
+    "price": 3900000,
+    "sizes": [
+      1,
+      2
     ],
-    "type": "نخ لنین",
-    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/lea.jpg",
+    "gallery": [
+      "/images/dress/lea.jpg",
+      "/images/dress/lea-g1.jpg",
+      "/images/dress/lea-g2.jpg",
+      "/images/dress/lea-g3.jpg"
+    ],
+    "description": "یکی از خاص ترین ست های لی که دیدین"
   },
   {
     "id": "5",
-    "slug": "long-coat",
-    "title": "مانتوی بلند",
-    "category": "skirt",
-    "price": 2200000,
-    "coverImage": "/images/product1.webp",
-    "gallery": [
-      "/images/product1.webp",
-      "/images/product1.webp",
-      "/images/product1.webp"
-    ],
+    "slug": "night_blue",
+    "title": "ست نایت بلو",
+    "category": "sets",
+    "price": 1600000,
     "sizes": [
-      1, 2
+      1,
+      2
     ],
-    "type": "نخ لنین",
-    "description": "مانتوی بلند شیک و مناسب فصل پاییز."
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/nightblue.jpg",
+    "gallery": [
+      "/images/dress/nightblue.jpg",
+      "/images/dress/nightblue-g1.jpg",
+      "/images/dress/nightblue-g2.jpg",
+      "/images/dress/nightblue-g3.jpg"
+    ],
+    "description": "یک ست فوق العاده راحت و آزاد با جنسی خنک و سبک"
+  },
+  {
+    "id": "6",
+    "slug": "swan",
+    "title": "ست  سه تیکه قو",
+    "category": "sets",
+    "price": 2100000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/swan.jpg",
+    "gallery": [
+      "/images/dress/swan.jpg",
+      "/images/dress/swan-g1.jpg",
+      "/images/dress/swan-g2.jpg",
+      "/images/dress/swan-g3.jpg",
+      "/images/dress/swan-g4.jpg"
+    ],
+    "description": "کیوت ترین ست سه تیکه (کراپ، کت و شلوار) که میتونی داشته باشی"
+  },
+  {
+    "id": "7",
+    "slug": "afshan",
+    "title": "شلوار افشان",
+    "category": "pants",
+    "price": 1200000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/afshan.jpg",
+    "gallery": [
+      "/images/dress/afshan.jpg",
+      "/images/dress/afshan-g1.jpg",
+      "/images/dress/afshan-g2.jpg",
+      "/images/dress/afshan-g3.jpg"
+    ],
+    "description": "در بازی نور و پارچه افشان میدرخشد"
+  },
+  {
+    "id": "8",
+    "slug": "sahel",
+    "title": "شومیز ساحل",
+    "category": "shomise",
+    "price": 950000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/sahel.jpg",
+    "gallery": [
+      "/images/dress/sahel.jpg",
+      "/images/dress/sahel-g1.jpg",
+      "/images/dress/sahel-g2.jpg"
+    ],
+    "description": "مناسب استایل های کژوآل و نیمه رسمی"
+  },
+  {
+    "id": "9",
+    "slug": "sea",
+    "title": "شومیز دریا",
+    "category": "shomise",
+    "price": 930000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/sea.jpg",
+    "gallery": [
+      "/images/dress/sea.jpg",
+      "/images/dress/sea-g1.jpg",
+      "/images/dress/sea-g2.jpg",
+      "/images/dress/sea-g3.jpg"
+    ],
+    "description": "مناسب روزای گرم، راحت و خنک"
+  },
+  {
+    "id": "10",
+    "slug": "pant_white",
+    "title": "شلوار دریا",
+    "category": "pants",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/whitepant.jpg",
+    "gallery": [
+      "/images/dress/whitepant.jpg",
+      "/images/dress/whitepant-g1.jpg",
+      "/images/dress/whitepant-g2.jpg"
+    ],
+    "description": "مناسب روزای گرم، راحت و خنک"
   }
 ]

@@ -4,8 +4,8 @@ export type Product = {
   title: string;
   category: string;
   price: number;
-  colors?: string[];
-  sizes?: number[];
+  colors: string[];
+  sizes?: number | number[];
   coverImage: string;
   gallery?: string[];
   type:string;

@@ -4,9 +4,11 @@ import { use } from "react";
 import { motion } from "framer-motion";
 import products from "@/data/products.json";
 import { ProductGallery, RandomProduct } from "@/component";
+import { Product } from "@/types";
+import toast from "react-hot-toast";
 
 function getProduct(id: string) {
-  const product = products.find((p) => p.id.toString() === id);
+  const product = products.find((p: Product) => p.id.toString() === id);
   if (!product) throw new Error("Product not found");
   return product;
 }
@@ -42,39 +44,37 @@ export default function ProductDetailPage({
             <div className="flex flex-col gap-2">
               <p>سایز</p>
               {product.sizes ? (
-                <ul className="flex items-center gap-2">
+                <ul className="flex flex-col lg:flex-row items-start lg:items-center gap-2">
                   {product.sizes.map((s, i) => (
                     <li
                       key={i}
-                      className="w-8 h-8 text-black bg-[#E5E1DA] flex items-center justify-center"
+                      className="h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
                     >
-                      {s}
+                      {s === 1
+                        ? `${s}مناسب سایز ۳۸ تا  ۴۲`
+                        : `مناسب سایز ۴۲ تا ۴۶ ${s}`}
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p>فری سایز هست و سایزبندی ندارد</p>
+                <p>فری سایز هست</p>
               )}
             </div>
 
             <div className="flex flex-col gap-2">
               <p>رنگ</p>
-              {product.colors ? (
-                <ul className="flex items-center gap-2">
-                  {product.colors.map((c, i) => (
-                    <li key={i}>{c}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p>تک رنگ</p>
-              )}
+              <ul className="flex items-center gap-2">
+                {product.colors.map((c: string) => (
+                  <li key={c}>{c}</li>
+                ))}
+              </ul>
             </div>
           </div>
 
           <button
-            className="w-full hidden md:inline-block text-center px-4 py-2 bg-[#E5E1DA] text-black transition"
+            className="cursor-pointer w-full hidden md:inline-block text-center px-4 py-2 bg-[#E5E1DA] text-black transition"
             onClick={() =>
-              alert("در حال حاضر امکان خرید از طریق سایت وجود ندارد")
+              toast.error("در حال حاضر امکان خرید از طریق سایت وجود ندارد")
             }
           >
             افزودن به سبد خرید
