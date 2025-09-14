@@ -17,8 +17,16 @@ export const menuItems: MenuItem[] = [
         href: "/category/shomise",
       },
       {
+        title: "تی شرت",
+        href: "/category/t-shirt",
+      },
+      {
         title: "شلوار ",
         href: "/category/pants",
+      },
+      {
+        title: "شلوار لی",
+        href: "/category/lea",
       },
       {
         title: "دامن",
@@ -27,6 +35,10 @@ export const menuItems: MenuItem[] = [
       {
         title: "کت و کراپ کت ها",
         href: "/category/jackets",
+      },
+      {
+        title: "لباس راحتی",
+        href: "/category/sleepwear",
       },
       {
         title: "اکسسوری‌ها",

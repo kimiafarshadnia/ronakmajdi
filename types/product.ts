@@ -12,6 +12,8 @@ export type Product = {
   description: string;
   moreDescription?: MoreDesc[];
   sale?: number;
+  inventory: boolean;
+  features?: string | string[];
 };
 
 export type MoreDesc = {

@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import products from "@/data/products.json";
@@ -67,22 +65,6 @@ export const RandomProduct = ({ title, bgColor, textColor }: Props) => {
               onClick={() => goToProductPage(product.id)}
               className="group relative cursor-pointer overflow-hidden transition-all duration-300 flex flex-col items-center justify-center gap-4 w-full"
             >
-              {/* <div className="relative w-full h-60 md:h-72 lg:h-96 overflow-hidden box-border">
-                  <Image
-                    src={product.coverImage || "/placeholder.png"}
-                    alt={product.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div
-                  className={`flex flex-col items-center gap-1 text-sm ${textColor}`}
-                >
-                  <span className="text-sm sm:text-base font-medium">
-                    {product.title}
-                  </span>
-                  <span className="font-light">{product.price?.toLocaleString()} تومان</span>
-                </div> */}
               <ProductCard product={product} />
             </motion.div>
           ))}

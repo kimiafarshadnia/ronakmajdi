@@ -28,6 +28,7 @@ export default function ProductDetailPage({
   });
   const colors = product.colors ?? "";
   const sizes = product.sizes ?? "";
+  const features = product.features;
   const moreDescription = product.moreDescription ?? "";
   return (
     <section className="container mx-auto px-4 py-10">
@@ -42,6 +43,11 @@ export default function ProductDetailPage({
           <div className="flex flex-col gap-5 mb-10">
             <div className="relative flex items-center w-full justify-between">
               <h1 className="text-3xl md:text-4xl">{product.title}</h1>
+              {product.inventory && (
+                <span className="text-2xl text-red-600 font-semibold">
+                  {"ناموجود"}
+                </span>
+              )}
               {product.sale && (
                 <span className="text-sm md:text-base flex items-center justify-center bg-red-600 text-white px-3 py-px w-fit">
                   {product.sale}
@@ -54,7 +60,7 @@ export default function ProductDetailPage({
               <div
                 className={`flex items-center gap-1  ${
                   product.sale
-                    ? "text-gray-300 text-sm md:text-base line-through decoration-solid decoration-1 decoration-gray-100"
+                    ? "text-gray-300 text-sm md:text-base line-through decoration-solid decoration-1 decoration-red-300"
                     : "text-xl md:text-2xl"
                 }`}
               >
@@ -81,44 +87,59 @@ export default function ProductDetailPage({
                 ))}
               </div>
             )}
-            <div className="flex flex-col gap-2">
-              <span>جنس</span>
-              <span className="w-fit h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center">
-                {product.type}
-              </span>
-            </div>
-            <div className="flex flex-col gap-2">
-              <span>سایز</span>
-              {sizes ? (
-                <ul className="flex flex-col lg:flex-row items-start lg:items-center gap-2">
-                  {sizes.map((s, i) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 ">
+              <div className="flex flex-col gap-2">
+                <span>جنس</span>
+                <span className="w-fit h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center">
+                  {product.type}
+                </span>
+              </div>
+              <div className="flex flex-col gap-2">
+                <span>سایز</span>
+                {sizes ? (
+                  <ul className="flex flex-col lg:flex-row items-start lg:items-center gap-2">
+                    {sizes.map((s, i) => (
+                      <li
+                        key={i}
+                        className="h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
+                      >
+                        {s === 1
+                          ? `${s} مناسب سایز ۳۸ تا  ۴۲`
+                          : `${s} مناسب سایز ۴۲ تا ۴۶`}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="w-fit h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center">
+                    فری سایز هست
+                  </p>
+                )}
+              </div>
+              <div className="flex flex-col gap-2">
+                <span>رنگ</span>
+                <ul className="flex items-center gap-2">
+                  {colors.map((c: string) => (
                     <li
-                      key={i}
+                      key={c}
                       className="h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
                     >
-                      {s === 1
-                        ? `${s} مناسب سایز ۳۸ تا  ۴۲`
-                        : `${s} مناسب سایز ۴۲ تا ۴۶`}
+                      {c}
                     </li>
                   ))}
                 </ul>
-              ) : (
-                <p>فری سایز هست</p>
-              )}
+              </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <span>رنگ</span>
-              <ul className="flex items-center gap-2">
-                {colors.map((c: string) => (
-                  <li
-                    key={c}
-                    className="h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
-                  >
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
+
+            {features && (
+              <div className="flex flex-col gap-2">
+                <span>توضیحات بیشتر</span>
+                <ul className="flex flex-col gap-2  w-full p-2 border">
+                  {features.map((f: string) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
           <button
             className="cursor-pointer w-full hidden md:inline-block text-center px-4 py-2 bg-[#E5E1DA] text-black transition"

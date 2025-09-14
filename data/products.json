@@ -22,7 +22,8 @@
       "تک رنگ"
     ],
     "description": "بسیار خنک و خوش دوخت ، راحت و شیک",
-    "sale": 15
+    "sale": 15,
+    "inventory": true
   },
   {
     "id": "2",
@@ -46,7 +47,8 @@
       "/images/dress/harir-gol-g3.webp",
       "/images/dress/harir-gol-g4.webp"
     ],
-    "description": "ستی که اینقدر ساده است که خاصه"
+    "description": "ستی که اینقدر ساده است که خاصه",
+    "inventory": false
   },
   {
     "id": "3",
@@ -69,7 +71,8 @@
       "/images/dress/roma-g2.webp",
       "/images/dress/roma-g3.webp"
     ],
-    "description": "یک ست مینیمال و مونوکروم با جنسی خنک و سبک"
+    "description": "یک ست مینیمال و مونوکروم با جنسی خنک و سبک",
+    "inventory": false
   },
   {
     "id": "4",
@@ -92,7 +95,8 @@
       "/images/dress/lea-g2.webp",
       "/images/dress/lea-g3.webp"
     ],
-    "description": "یکی از خاص ترین ست های لی که دیدین"
+    "description": "یکی از خاص ترین ست های لی که دیدین",
+    "inventory": false
   },
   {
     "id": "5",
@@ -115,7 +119,8 @@
       "/images/dress/nightblue-g2.webp",
       "/images/dress/nightblue-g3.webp"
     ],
-    "description": "یک ست فوق العاده راحت و آزاد با جنسی خنک و سبک"
+    "description": "یک ست فوق العاده راحت و آزاد با جنسی خنک و سبک",
+    "inventory": false
   },
   {
     "id": "6",
@@ -139,7 +144,8 @@
       "/images/dress/swan-g3.webp",
       "/images/dress/swan-g4.webp"
     ],
-    "description": "کیوت ترین ست سه تیکه (کراپ، کت و شلوار) که میتونی داشته باشی"
+    "description": "کیوت ترین ست سه تیکه (کراپ، کت و شلوار) که میتونی داشته باشی",
+    "inventory": false
   },
   {
     "id": "7",
@@ -162,7 +168,8 @@
       "/images/dress/afshan-g2.webp",
       "/images/dress/afshan-g3.webp"
     ],
-    "description": "در بازی نور و پارچه افشان میدرخشد"
+    "description": "در بازی نور و پارچه افشان میدرخشد",
+    "inventory": false
   },
   {
     "id": "8",
@@ -184,7 +191,8 @@
       "/images/dress/sahel-g1.webp",
       "/images/dress/sahel-g2.webp"
     ],
-    "description": "مناسب استایل های کژوآل و نیمه رسمی"
+    "description": "مناسب استایل های کژوآل و نیمه رسمی",
+    "inventory": false
   },
   {
     "id": "9",
@@ -207,7 +215,8 @@
       "/images/dress/sea-g2.webp",
       "/images/dress/sea-g3.webp"
     ],
-    "description": "مناسب روزای گرم، راحت و خنک"
+    "description": "مناسب روزای گرم، راحت و خنک",
+    "inventory": false
   },
   {
     "id": "10",
@@ -229,7 +238,8 @@
       "/images/dress/whitepant-g1.webp",
       "/images/dress/whitepant-g2.webp"
     ],
-    "description": "مناسب روزای گرم، راحت و خنک"
+    "description": "مناسب روزای گرم، راحت و خنک",
+    "inventory": false
   },
   {
     "id": "11",
@@ -252,7 +262,8 @@
       "/images/dress/cacaou-g2.webp",
       "/images/dress/cacaou-g3.webp"
     ],
-    "description": "نه زیاد شلوغ ، نه زیاد ساده"
+    "description": "نه زیاد شلوغ ، نه زیاد ساده",
+    "inventory": false
   },
   {
     "id": "12",
@@ -274,18 +285,15 @@
       "/images/dress/whiteskirt-g1.webp",
       "/images/dress/whiteskirt-g2.webp"
     ],
-    "description": "نه زیاد شلوغ ، نه زیاد ساده"
+    "description": "نه زیاد شلوغ ، نه زیاد ساده",
+    "inventory": false
   },
   {
     "id": "13",
     "slug": "gol_bahar",
     "title": "ست گلبهار",
     "category": "sets",
-    "price": 980000,
-    "sizes": [
-      1,
-      2
-    ],
+    "price": 3700000,
     "colors": [
       "تک رنگ"
     ],
@@ -294,9 +302,15 @@
     "gallery": [
       "/images/dress/golbahar.webp",
       "/images/dress/golbahar-g1.webp",
-      "/images/dress/golbahar-g2.webp"
+      "/images/dress/golbahar-g2.webp",
+      "/images/dress/golbahar-g3.webp"
     ],
-    "description": "عطر گل پخش میشه با پوشیدنش"
+    "description": "عطر گل پخش میشه با پوشیدنش",
+    "inventory": false,
+    "features": [
+      "قد دامن ۹۴",
+      "قد شومیز ۵۱"
+    ]
   },
   {
     "id": "14",
@@ -318,7 +332,8 @@
       "/images/dress/anardoon-g1.webp",
       "/images/dress/anardoon-g2.webp"
     ],
-    "description": ""
+    "description": "",
+    "inventory": false
   },
   {
     "id": "15",
@@ -343,7 +358,8 @@
       "/images/dress/torang-g4.webp",
       "/images/dress/torang-g5.webp"
     ],
-    "description": ""
+    "description": "",
+    "inventory": false
   },
   {
     "id": "16",
@@ -365,7 +381,8 @@
       "/images/dress/nilabshomise-g1.webp",
       "/images/dress/nilabshomise-g2.webp"
     ],
-    "description": "شومیز خنک و سبک با تن خور راحت و جذاب"
+    "description": "شومیز خنک و سبک با تن خور راحت و جذاب",
+    "inventory": false
   },
   {
     "id": "17",
@@ -387,7 +404,8 @@
       "/images/dress/nilabshomise-g1.webp",
       "/images/dress/nilabshomise-g2.webp"
     ],
-    "description": "کت خنک و سبک با تن خور راحت و جذاب"
+    "description": "کت خنک و سبک با تن خور راحت و جذاب",
+    "inventory": false
   },
   {
     "id": "18",
@@ -413,7 +431,7 @@
       "/images/dress/barooka-g4.webp",
       "/images/dress/barooka-g5.webp"
     ],
-   "description": "هر آیتم به صورت جداگانه قابل سفارش است",
+    "description": "هر آیتم به صورت جداگانه قابل سفارش است",
     "moreDescription": [
       {
         "id": "1",
@@ -430,7 +448,8 @@
         "title": "مینی اسکارف باروکا",
         "price": 300000
       }
-    ]
+    ],
+    "inventory": false
   },
   {
     "id": "20",
@@ -446,7 +465,8 @@
     "gallery": [
       "/images/dress/barooka-g5.webp"
     ],
-    "description": ""
+    "description": "",
+    "inventory": false
   },
   {
     "id": "21",
@@ -472,7 +492,8 @@
       "/images/dress/noghretab-g5.webp",
       "/images/dress/noghretab-g6.webp"
     ],
-    "description": "هم برای استایل کژوآل و هم استایل رسمی"
+    "description": "هم برای استایل کژوآل و هم استایل رسمی",
+    "inventory": false
   },
   {
     "id": "22",
@@ -494,7 +515,8 @@
       "/images/dress/sehrshomise-g1.webp",
       "/images/dress/sehrshomise-g2.webp"
     ],
-    "description": ""
+    "description": "",
+    "inventory": false
   },
   {
     "id": "23",
@@ -516,7 +538,8 @@
       "/images/dress/sehrskirt-g1.webp",
       "/images/dress/sehrskirt-g2.webp"
     ],
-    "description": ""
+    "description": "",
+    "inventory": false
   },
   {
     "id": "24",
@@ -559,7 +582,8 @@
         "title": "شلوار دارسا",
         "price": 1300000
       }
-    ]
+    ],
+    "inventory": false
   },
   {
     "id": "25",
@@ -581,7 +605,8 @@
       "/images/dress/heliajacket-g1.webp",
       "/images/dress/heliajacket-g2.webp"
     ],
-    "description": ""
+    "description": "",
+    "inventory": false
   },
   {
     "id": "26",
@@ -603,7 +628,8 @@
       "/images/dress/soha-g1.webp",
       "/images/dress/soha-g2.webp"
     ],
-    "description": ""
+    "description": "",
+    "inventory": false
   },
   {
     "id": "27",
@@ -625,6 +651,26 @@
       "/images/dress/tarika-g1.webp",
       "/images/dress/tarika-g2.webp"
     ],
-    "description": ""
+    "description": "",
+    "inventory": false
+  },
+  {
+    "id": "28",
+    "slug": "kamarband-sehr",
+    "title": "کمربند سحر",
+    "category": "belt",
+    "price": 450000,
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "نگین ظریف",
+    "coverImage": "/images/dress/sehrbelt.webp",
+    "gallery": [
+      "/images/dress/sehrbelt.webp",
+      "/images/dress/sehrbelt-g1.webp",
+      "/images/dress/sehrbelt-g2.webp"
+    ],
+    "description": "کمربند دست دوز با طرح سنتی و نگین های ظریف",
+    "inventory": false
   }
 ]

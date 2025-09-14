@@ -37,7 +37,7 @@ export const ProductCard = ({ product }: Props) => {
               <p
                 className={`text-[#E5E1DA] text-end ${
                   product.sale
-                    ? "text-gray-300 line-through decoration-solid decoration-1 decoration-gray-100"
+                    ? "text-gray-300 line-through decoration-solid decoration-1 decoration-red-300"
                     : ""
                 }`}
               >
@@ -53,8 +53,13 @@ export const ProductCard = ({ product }: Props) => {
             )}
           </div>
         </div>
+        {product.inventory && (
+          <span className="absolute top-3 text-sm right-2 rounded-tl-xl rounded-bl-xl flex items-center justify-center bg-gray-400 text-gray-100 px-3 py-px w-fit">
+            {"ناموجود"}
+          </span>
+        )}
         {product.sale && (
-          <span className="absolute top-3 left-2 rounded-tr-xl rounded-br-xl flex items-center justify-center bg-red-600 text-white px-3 py-px w-fit">
+          <span className="absolute top-3 text-sm left-2 rounded-tr-xl rounded-br-xl flex items-center justify-center bg-red-600 text-white px-3 py-px w-fit">
             {product.sale}
             {"%"}
           </span>
