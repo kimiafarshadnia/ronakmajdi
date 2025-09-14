@@ -8,6 +8,14 @@ export type Product = {
   sizes?: number | number[];
   coverImage: string;
   gallery?: string[];
-  type:string;
+  type: string;
   description: string;
+  moreDescription?: MoreDesc[];
+  sale?: number;
+};
+
+export type MoreDesc = {
+  id: string;
+  title: string;
+  price: number;
 };

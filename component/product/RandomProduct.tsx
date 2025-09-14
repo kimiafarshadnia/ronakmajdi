@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import products from "@/data/products.json";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import { ProductCard } from "./ProductCard";
 
 type Props = {
   title?: string;
@@ -42,7 +43,7 @@ export const RandomProduct = ({ title, bgColor, textColor }: Props) => {
   };
   return (
     <div ref={ref} className={`w-full py-12 ${bgColor}`}>
-      <div className="container mx-auto px-4 w-full flex flex-col items-center gap-5">
+      <div className="container mx-auto w-full flex flex-col items-center gap-5">
         {title && (
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
@@ -54,19 +55,19 @@ export const RandomProduct = ({ title, bgColor, textColor }: Props) => {
           </motion.h2>
         )}
 
-        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 place-items-center">
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 place-items-center">
           {randomProducts.map((product, index) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                whileHover={{ scale: 1.05 }}
-                variants={itemVariants}
-                onClick={() => goToProductPage(product.id)}
-                className="group relative cursor-pointer overflow-hidden transition-all duration-300 flex flex-col items-center justify-center gap-4 w-full"
-              >
-                <div className="relative w-full h-60 md:h-72 lg:h-96 overflow-hidden box-border">
+            <motion.div
+              key={product.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05 }}
+              variants={itemVariants}
+              onClick={() => goToProductPage(product.id)}
+              className="group relative cursor-pointer overflow-hidden transition-all duration-300 flex flex-col items-center justify-center gap-4 w-full"
+            >
+              {/* <div className="relative w-full h-60 md:h-72 lg:h-96 overflow-hidden box-border">
                   <Image
                     src={product.coverImage || "/placeholder.png"}
                     alt={product.title}
@@ -75,15 +76,16 @@ export const RandomProduct = ({ title, bgColor, textColor }: Props) => {
                   />
                 </div>
                 <div
-                  className={`flex flex-col items-center gap-1 ${textColor}`}
+                  className={`flex flex-col items-center gap-1 text-sm ${textColor}`}
                 >
                   <span className="text-sm sm:text-base font-medium">
                     {product.title}
                   </span>
                   <span className="font-light">{product.price?.toLocaleString()} تومان</span>
-                </div>
-              </motion.div>
-            ))}
+                </div> */}
+              <ProductCard product={product} />
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>

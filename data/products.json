@@ -8,8 +8,8 @@
     "coverImage": "/images/dress/kaftan.webp",
     "type": "لینن وارداتی",
     "gallery": [
+      "/images/dress/kaftan.webp",
       "/images/dress/kaftan-g1.webp",
-      "/images/dress/kaftan-g2.webp",
       "/images/dress/kaftan-g3.webp",
       "/images/dress/kaftan-g4.webp",
       "/images/dress/kaftan-g5.webp"
@@ -21,7 +21,8 @@
     "colors": [
       "تک رنگ"
     ],
-    "description": "بسیار خنک و خوش دوخت ، راحت و شیک"
+    "description": "بسیار خنک و خوش دوخت ، راحت و شیک",
+    "sale": 15
   },
   {
     "id": "2",
@@ -233,7 +234,7 @@
   {
     "id": "11",
     "slug": "cacaou",
-    "title": "ست کاکايو شاهانه",
+    "title": "ست کاکائو شاهانه ",
     "category": "sets",
     "price": 2600000,
     "sizes": [
@@ -251,14 +252,14 @@
       "/images/dress/cacaou-g2.webp",
       "/images/dress/cacaou-g3.webp"
     ],
-    "description":"نه زیاد شلوغ ، نه زیاد ساده"
+    "description": "نه زیاد شلوغ ، نه زیاد ساده"
   },
   {
     "id": "12",
     "slug": "noora",
     "title": "دامن سفید نورا",
     "category": "skirt",
-    "price":980000,
+    "price": 980000,
     "sizes": [
       1,
       2
@@ -273,6 +274,357 @@
       "/images/dress/whiteskirt-g1.webp",
       "/images/dress/whiteskirt-g2.webp"
     ],
-    "description":"نه زیاد شلوغ ، نه زیاد ساده"
+    "description": "نه زیاد شلوغ ، نه زیاد ساده"
+  },
+  {
+    "id": "13",
+    "slug": "gol_bahar",
+    "title": "ست گلبهار",
+    "category": "sets",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/golbahar.webp",
+    "gallery": [
+      "/images/dress/golbahar.webp",
+      "/images/dress/golbahar-g1.webp",
+      "/images/dress/golbahar-g2.webp"
+    ],
+    "description": "عطر گل پخش میشه با پوشیدنش"
+  },
+  {
+    "id": "14",
+    "slug": "anardoon",
+    "title": "کراپ کت اناردون",
+    "category": "jackets",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/anardoon.webp",
+    "gallery": [
+      "/images/dress/anardoon.webp",
+      "/images/dress/anardoon-g1.webp",
+      "/images/dress/anardoon-g2.webp"
+    ],
+    "description": ""
+  },
+  {
+    "id": "15",
+    "slug": "torang",
+    "title": "شلوار ترنگ",
+    "category": "pants",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/torang.webp",
+    "gallery": [
+      "/images/dress/torang.webp",
+      "/images/dress/torang-g1.webp",
+      "/images/dress/torang-g2.webp",
+      "/images/dress/torang-g3.webp",
+      "/images/dress/torang-g4.webp",
+      "/images/dress/torang-g5.webp"
+    ],
+    "description": ""
+  },
+  {
+    "id": "16",
+    "slug": "nilab",
+    "title": "شومیز نیلاب",
+    "category": "shomise",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/nilabshomise.webp",
+    "gallery": [
+      "/images/dress/nilabshomise.webp",
+      "/images/dress/nilabshomise-g1.webp",
+      "/images/dress/nilabshomise-g2.webp"
+    ],
+    "description": "شومیز خنک و سبک با تن خور راحت و جذاب"
+  },
+  {
+    "id": "17",
+    "slug": "nilab_jacket",
+    "title": "کت نیلاب",
+    "category": "jackets",
+    "price": 1300000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/nilabshomise.webp",
+    "gallery": [
+      "/images/dress/nilabshomise.webp",
+      "/images/dress/nilabshomise-g1.webp",
+      "/images/dress/nilabshomise-g2.webp"
+    ],
+    "description": "کت خنک و سبک با تن خور راحت و جذاب"
+  },
+  {
+    "id": "18",
+    "slug": "barooka",
+    "title": "ست باروکا",
+    "category": "sets",
+    "price": 3300000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "مشکی",
+      "قهوه ای"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/barooka.webp",
+    "gallery": [
+      "/images/dress/barooka.webp",
+      "/images/dress/barooka-g1.webp",
+      "/images/dress/barooka-g2.webp",
+      "/images/dress/barooka-g3.webp",
+      "/images/dress/barooka-g4.webp",
+      "/images/dress/barooka-g5.webp"
+    ],
+   "description": "هر آیتم به صورت جداگانه قابل سفارش است",
+    "moreDescription": [
+      {
+        "id": "1",
+        "title": "کت باروکا",
+        "price": 1800000
+      },
+      {
+        "id": "2",
+        "title": "شلوار باروکا",
+        "price": 1300000
+      },
+      {
+        "id": "3",
+        "title": "مینی اسکارف باروکا",
+        "price": 300000
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "slug": "mini_scarf_barooka",
+    "title": "مینی اسکارف باروکا",
+    "category": "scarves",
+    "price": 300000,
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "تور گلدوزی شده",
+    "coverImage": "/images/dress/barooka-g5.webp",
+    "gallery": [
+      "/images/dress/barooka-g5.webp"
+    ],
+    "description": ""
+  },
+  {
+    "id": "21",
+    "slug": "noghre_tab",
+    "title": "ست نقره تاب",
+    "category": "sets",
+    "price": 3400000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "کرمی "
+    ],
+    "type": "لینن ترک",
+    "coverImage": "/images/dress/noghretab.webp",
+    "gallery": [
+      "/images/dress/noghretab.webp",
+      "/images/dress/noghretab-g1.webp",
+      "/images/dress/noghretab-g2.webp",
+      "/images/dress/noghretab-g3.webp",
+      "/images/dress/noghretab-g4.webp",
+      "/images/dress/noghretab-g5.webp",
+      "/images/dress/noghretab-g6.webp"
+    ],
+    "description": "هم برای استایل کژوآل و هم استایل رسمی"
+  },
+  {
+    "id": "22",
+    "slug": "sehr_shomise",
+    "title": "شومیز سحر",
+    "category": "shomise",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/sehrshomise.webp",
+    "gallery": [
+      "/images/dress/sehrshomise.webp",
+      "/images/dress/sehrshomise-g1.webp",
+      "/images/dress/sehrshomise-g2.webp"
+    ],
+    "description": ""
+  },
+  {
+    "id": "23",
+    "slug": "sehr-skirt",
+    "title": "دامن سحر",
+    "category": "skirt",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/sehrskirt.webp",
+    "gallery": [
+      "/images/dress/sehrskirt.webp",
+      "/images/dress/sehrskirt-g1.webp",
+      "/images/dress/sehrskirt-g2.webp"
+    ],
+    "description": ""
+  },
+  {
+    "id": "24",
+    "slug": "darsa",
+    "title": "ست دارسا",
+    "category": "sets",
+    "price": 5900000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/darsa.webp",
+    "gallery": [
+      "/images/dress/darsa.webp",
+      "/images/dress/darsa-g1.webp",
+      "/images/dress/darsa-g2.webp",
+      "/images/dress/darsa-g4.webp",
+      "/images/dress/darsa-g5.webp",
+      "/images/dress/darsa-g6.webp",
+      "/images/dress/darsa-g7.webp"
+    ],
+    "description": "هر آیتم به صورت جداگانه قابل سفارش است",
+    "moreDescription": [
+      {
+        "id": "1",
+        "title": "کت دارسا",
+        "price": 2800000
+      },
+      {
+        "id": "2",
+        "title": "ژیله دارسا",
+        "price": 1800000
+      },
+      {
+        "id": "3",
+        "title": "شلوار دارسا",
+        "price": 1300000
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "slug": "helia_jacket",
+    "title": "کت هلیا",
+    "category": "jackets",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/heliajacket.webp",
+    "gallery": [
+      "/images/dress/heliajacket.webp",
+      "/images/dress/heliajacket-g1.webp",
+      "/images/dress/heliajacket-g2.webp"
+    ],
+    "description": ""
+  },
+  {
+    "id": "26",
+    "slug": "soha_jacket",
+    "title": "کت سها",
+    "category": "jackets",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/soha.webp",
+    "gallery": [
+      "/images/dress/soha.webp",
+      "/images/dress/soha-g1.webp",
+      "/images/dress/soha-g2.webp"
+    ],
+    "description": ""
+  },
+  {
+    "id": "27",
+    "slug": "tarika_jacket",
+    "title": "کت اورسایز تاریکا",
+    "category": "jackets",
+    "price": 980000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/tarika.webp",
+    "gallery": [
+      "/images/dress/tarika.webp",
+      "/images/dress/tarika-g1.webp",
+      "/images/dress/tarika-g2.webp"
+    ],
+    "description": ""
   }
 ]

@@ -70,19 +70,15 @@ export default function CategoryPage({
         {displayedProducts.length === 0 ? (
           <NoItem />
         ) : (
-          <motion.div
+          <div
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            key={page}
           >
             {displayedProducts.map((product) => (
               <motion.div key={product.id} variants={itemVariants}>
                 <ProductCard product={product} />
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         )}
 
         {totalPages > 1 && (

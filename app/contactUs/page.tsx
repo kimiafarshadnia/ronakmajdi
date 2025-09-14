@@ -109,7 +109,7 @@ export default function ContactUs() {
             </div>
             <div>
               <h3 className="text-lg font-semibold">شماره تماس:</h3>
-              <p className="text-white">۰۹۱۲۳۴۵۶۷۸۹</p>
+              <p className="text-white">۰۹۰۳۵۲۳۴۱۵۶</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold">ساعت پاسخ‌گویی:</h3>
@@ -117,7 +117,7 @@ export default function ContactUs() {
             </div>
             <div className="flex items-center gap-3 pt-2 justify-start">
               <Link
-                href="https://wa.me/989123456789"
+                href="https://wa.me/989035234156"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -128,7 +128,7 @@ export default function ContactUs() {
                 />
               </Link>
               <Link
-                href="https://instagram.com/ronakmajdi"
+                href="https://instagram.com/ronak.majdi"
                 target="_blank"
                 rel="noopener noreferrer"
               >

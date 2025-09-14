@@ -5,8 +5,8 @@ export default function NotFound() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 py-12">
       <Image
-        src="/images/404.webp"
-        alt="صفحه مورد نظر یافت نشد"
+        src="/images/empty-hanger.webp"
+        alt="EMPTY_HANGER"
         width={300}
         height={300}
         className="mb-8"
