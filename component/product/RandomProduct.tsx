@@ -65,7 +65,7 @@ export const RandomProduct = ({ title, bgColor, textColor }: Props) => {
               onClick={() => goToProductPage(product.id)}
               className="group relative cursor-pointer overflow-hidden transition-all duration-300 flex flex-col items-center justify-center gap-4 w-full"
             >
-              <ProductCard product={product} />
+              <ProductCard product={product} textColor={textColor}/>
             </motion.div>
           ))}
         </div>

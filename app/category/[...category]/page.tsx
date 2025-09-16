@@ -6,11 +6,12 @@ import productsData from "@/data/products.json";
 import { NoItem, Pagination, ProductCard } from "@/component";
 
 const categoryBackgrounds: Record<string, string> = {
-  pants: "/images/shalvar.jpeg",
-  shomise: "/images/clothes.jpeg",
-  sets: "/images/heroImage.webp",
-  jackets: "/images/manto.jpg",
-  belt: "/images/heroImage.webp",
+  pants: "/images/posters/shalvar.jpeg",
+  shomise: "/images/posters/clothes.jpeg",
+  sets: "/images/posters/heroImage.webp",
+  jackets: "/images/posters/manto.jpg",
+  belt: "/images/posters/heroImage.webp",
+  tshirt: "/images/posters/tshirt.webp",
 };
 
 function getProducts(categoryPath: string[]) {

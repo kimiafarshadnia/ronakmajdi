@@ -6,9 +6,10 @@ import { usePrice } from "@/hooks/useSalePrice";
 
 type Props = {
   product: Product;
+  textColor?: string;
 };
 
-export const ProductCard = ({ product }: Props) => {
+export const ProductCard = ({ product, textColor }: Props) => {
   const router = useRouter();
   const finalPrice = usePrice({
     originalPrice: product.price,
@@ -20,24 +21,24 @@ export const ProductCard = ({ product }: Props) => {
   return (
     <div
       onClick={() => goToProductPage(product.id)}
-      className="relative overflow-hidden hover:shadow-md transition p-2"
+      className="relative overflow-hidden cursor-pointer transition"
     >
       <Image
         src={product.coverImage || "/placeholder.png"}
         alt={product.title}
-        className="w-full sm:h-80 object-cover mb-5"
+        className="w-full h-[230px] sm:h-[330px] object-cover mb-5"
         width={250}
         height={300}
       />
       <div className="flex flex-col justify-center gap-5 pb-3 md:pb-0">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs min-[500px]:text-base">
-          <h3 className="text-start">{product.title}</h3>
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col sm:flex-row  sm:justify-between gap-2 text-xs min-[500px]:text-base">
+          <h3 className={`text-start ${textColor}`}>{product.title}</h3>
+          <div className={`flex flex-col gap-2 ${textColor}`}>
             <div className="flex items-center gap-1 text-sm">
               <p
-                className={`text-[#E5E1DA] text-end ${
+                className={`text-end ${
                   product.sale
-                    ? "text-gray-300 line-through decoration-solid decoration-1 decoration-red-300"
+                    ? "text-gra-500 line-through decoration-solid decoration-1 decoration-red-500"
                     : ""
                 }`}
               >
@@ -45,21 +46,26 @@ export const ProductCard = ({ product }: Props) => {
               </p>
               <span> تومان</span>
             </div>
-            {product.sale && (
-              <div className="flex items-center gap-1 text-sm">
-                <p className="text-[#E5E1DA]">{finalPrice.toLocaleString()}</p>
+            {product.sale ? (
+              <div className={`${textColor} flex items-center gap-1 text-sm`}>
+                <p>{finalPrice.toLocaleString()}</p>
                 <span> تومان</span>
+              </div>
+            ) : (
+              <div className="invisible flex items-center gap-1 text-sm">
+                <p>0</p>
+                <span>تومان</span>
               </div>
             )}
           </div>
         </div>
         {product.inventory && (
-          <span className="absolute top-3 text-sm right-2 rounded-tl-xl rounded-bl-xl flex items-center justify-center bg-gray-400 text-gray-100 px-3 py-px w-fit">
+          <span className="absolute top-3 text-sm right-0 rounded-tl-xl rounded-bl-xl flex items-center justify-center bg-gray-400 text-gray-100 px-3 py-px w-fit">
             {"ناموجود"}
           </span>
         )}
         {product.sale && (
-          <span className="absolute top-3 text-sm left-2 rounded-tr-xl rounded-br-xl flex items-center justify-center bg-red-600 text-white px-3 py-px w-fit">
+          <span className="absolute top-3 text-sm left-0 rounded-tr-xl rounded-br-xl flex items-center justify-center bg-red-600 text-white px-3 py-px w-fit">
             {product.sale}
             {"%"}
           </span>

@@ -18,7 +18,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         title: "تی شرت",
-        href: "/category/t-shirt",
+        href: "/category/tshirt",
       },
       {
         title: "شلوار ",
@@ -31,6 +31,10 @@ export const menuItems: MenuItem[] = [
       {
         title: "دامن",
         href: "/category/skirt",
+      },
+      {
+        title: "پیراهن و کفتان",
+        href: "/category/dress",
       },
       {
         title: "کت و کراپ کت ها",

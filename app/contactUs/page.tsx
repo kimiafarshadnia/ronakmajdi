@@ -109,7 +109,7 @@ export default function ContactUs() {
             </div>
             <div>
               <h3 className="text-lg font-semibold">شماره تماس:</h3>
-              <p className="text-white">۰۹۰۳۵۲۳۴۱۵۶</p>
+              <p className="text-white" dir="ltr">+98 903 523 4156</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold">ساعت پاسخ‌گویی:</h3>

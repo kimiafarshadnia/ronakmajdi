@@ -97,11 +97,11 @@ export default function ProductDetailPage({
               <div className="flex flex-col gap-2">
                 <span>سایز</span>
                 {sizes ? (
-                  <ul className="flex flex-col lg:flex-row items-start lg:items-center gap-2">
+                  <ul className="flex flex-col items-start gap-2">
                     {sizes.map((s, i) => (
                       <li
                         key={i}
-                        className="h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
+                        className="text-sm h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
                       >
                         {s === 1
                           ? `${s} مناسب سایز ۳۸ تا  ۴۲`
@@ -110,7 +110,7 @@ export default function ProductDetailPage({
                     ))}
                   </ul>
                 ) : (
-                  <p className="w-fit h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center">
+                  <p className="text-sm w-fit h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center">
                     فری سایز هست
                   </p>
                 )}
@@ -121,7 +121,7 @@ export default function ProductDetailPage({
                   {colors.map((c: string) => (
                     <li
                       key={c}
-                      className="h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
+                      className="text-sm h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
                     >
                       {c}
                     </li>
@@ -151,7 +151,10 @@ export default function ProductDetailPage({
           </button>
         </motion.div>
       </div>
-      <RandomProduct title="محصولات بازدید شده اخیر" />
+      <RandomProduct
+        title="محصولات بازدید شده اخیر"
+        textColor="text-[#E5E1DA]"
+      />
     </section>
   );
 }

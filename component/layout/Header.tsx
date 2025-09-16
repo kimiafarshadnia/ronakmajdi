@@ -217,10 +217,20 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-3">
-          <Link href="/" className="hover:scale-130 duration-300">
+          <Link
+            href="https://wa.me/989035234156"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-130 duration-300"
+          >
             <Icon iconName={faWhatsapp} size="lg" />
           </Link>
-          <Link href="/" className="hover:scale-130 duration-300">
+          <Link
+            href="https://instagram.com/ronak.majdi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-130 duration-300"
+          >
             <Icon iconName={faInstagram} size="lg" />
           </Link>
         </div>

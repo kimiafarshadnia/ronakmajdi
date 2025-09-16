@@ -3,7 +3,7 @@
     "id": "1",
     "slug": "black-dress",
     "title": "کفتان تابنا",
-    "category": "skirt",
+    "category": "dress",
     "price": 2500000,
     "coverImage": "/images/dress/kaftan.webp",
     "type": "لینن وارداتی",
@@ -313,29 +313,6 @@
     ]
   },
   {
-    "id": "14",
-    "slug": "anardoon",
-    "title": "کراپ کت اناردون",
-    "category": "jackets",
-    "price": 980000,
-    "sizes": [
-      1,
-      2
-    ],
-    "colors": [
-      "تک رنگ"
-    ],
-    "type": "لینن وارداتی",
-    "coverImage": "/images/dress/anardoon.webp",
-    "gallery": [
-      "/images/dress/anardoon.webp",
-      "/images/dress/anardoon-g1.webp",
-      "/images/dress/anardoon-g2.webp"
-    ],
-    "description": "",
-    "inventory": false
-  },
-  {
     "id": "15",
     "slug": "torang",
     "title": "شلوار ترنگ",
@@ -496,52 +473,6 @@
     "inventory": false
   },
   {
-    "id": "22",
-    "slug": "sehr_shomise",
-    "title": "شومیز سحر",
-    "category": "shomise",
-    "price": 980000,
-    "sizes": [
-      1,
-      2
-    ],
-    "colors": [
-      "تک رنگ"
-    ],
-    "type": "لینن وارداتی",
-    "coverImage": "/images/dress/sehrshomise.webp",
-    "gallery": [
-      "/images/dress/sehrshomise.webp",
-      "/images/dress/sehrshomise-g1.webp",
-      "/images/dress/sehrshomise-g2.webp"
-    ],
-    "description": "",
-    "inventory": false
-  },
-  {
-    "id": "23",
-    "slug": "sehr-skirt",
-    "title": "دامن سحر",
-    "category": "skirt",
-    "price": 980000,
-    "sizes": [
-      1,
-      2
-    ],
-    "colors": [
-      "تک رنگ"
-    ],
-    "type": "لینن وارداتی",
-    "coverImage": "/images/dress/sehrskirt.webp",
-    "gallery": [
-      "/images/dress/sehrskirt.webp",
-      "/images/dress/sehrskirt-g1.webp",
-      "/images/dress/sehrskirt-g2.webp"
-    ],
-    "description": "",
-    "inventory": false
-  },
-  {
     "id": "24",
     "slug": "darsa",
     "title": "ست دارسا",
@@ -586,57 +517,11 @@
     "inventory": false
   },
   {
-    "id": "25",
-    "slug": "helia_jacket",
-    "title": "کت هلیا",
-    "category": "jackets",
-    "price": 980000,
-    "sizes": [
-      1,
-      2
-    ],
-    "colors": [
-      "تک رنگ"
-    ],
-    "type": "لینن وارداتی",
-    "coverImage": "/images/dress/heliajacket.webp",
-    "gallery": [
-      "/images/dress/heliajacket.webp",
-      "/images/dress/heliajacket-g1.webp",
-      "/images/dress/heliajacket-g2.webp"
-    ],
-    "description": "",
-    "inventory": false
-  },
-  {
-    "id": "26",
-    "slug": "soha_jacket",
-    "title": "کت سها",
-    "category": "jackets",
-    "price": 980000,
-    "sizes": [
-      1,
-      2
-    ],
-    "colors": [
-      "تک رنگ"
-    ],
-    "type": "لینن وارداتی",
-    "coverImage": "/images/dress/soha.webp",
-    "gallery": [
-      "/images/dress/soha.webp",
-      "/images/dress/soha-g1.webp",
-      "/images/dress/soha-g2.webp"
-    ],
-    "description": "",
-    "inventory": false
-  },
-  {
     "id": "27",
     "slug": "tarika_jacket",
     "title": "کت اورسایز تاریکا",
     "category": "jackets",
-    "price": 980000,
+    "price": 2100000,
     "sizes": [
       1,
       2
@@ -651,7 +536,7 @@
       "/images/dress/tarika-g1.webp",
       "/images/dress/tarika-g2.webp"
     ],
-    "description": "",
+    "description": "اینقدر فرم داره که لازم نیست هیج اکسسوری اضافه ای کنارش باشه",
     "inventory": false
   },
   {
