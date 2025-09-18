@@ -23,7 +23,7 @@ export const ProductGallery = ({ gallery }: Props) => {
     <div className="w-full flex flex-col sm:flex-row-reverse justify-center gap-3">
       {/* Main Image */}
       <div
-        className="relative w-full max-w-[400px] h-[320px] sm:h-full mb-4 overflow-hidden flex justify-start items-start"
+        className="relative w-full max-w-[400px] h-[350px] sm:h-full mb-4 overflow-hidden flex justify-start items-start"
         onMouseMove={(e) => {
           const { left, top, width, height } =
             e.currentTarget.getBoundingClientRect();
