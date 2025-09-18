@@ -22,8 +22,8 @@
       "تک رنگ"
     ],
     "description": "بسیار خنک و خوش دوخت ، راحت و شیک",
-    "sale": 15,
-    "inventory": true
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "2",
@@ -48,7 +48,8 @@
       "/images/dress/harir-gol-g4.webp"
     ],
     "description": "ستی که اینقدر ساده است که خاصه",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "3",
@@ -72,7 +73,8 @@
       "/images/dress/roma-g3.webp"
     ],
     "description": "یک ست مینیمال و مونوکروم با جنسی خنک و سبک",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "4",
@@ -96,7 +98,8 @@
       "/images/dress/lea-g3.webp"
     ],
     "description": "یکی از خاص ترین ست های لی که دیدین",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "5",
@@ -120,7 +123,8 @@
       "/images/dress/nightblue-g3.webp"
     ],
     "description": "یک ست فوق العاده راحت و آزاد با جنسی خنک و سبک",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "6",
@@ -145,7 +149,8 @@
       "/images/dress/swan-g4.webp"
     ],
     "description": "کیوت ترین ست سه تیکه (کراپ، کت و شلوار) که میتونی داشته باشی",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "7",
@@ -169,7 +174,8 @@
       "/images/dress/afshan-g3.webp"
     ],
     "description": "در بازی نور و پارچه افشان میدرخشد",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "8",
@@ -192,7 +198,8 @@
       "/images/dress/sahel-g2.webp"
     ],
     "description": "مناسب استایل های کژوآل و نیمه رسمی",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "9",
@@ -216,7 +223,8 @@
       "/images/dress/sea-g3.webp"
     ],
     "description": "مناسب روزای گرم، راحت و خنک",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "10",
@@ -239,7 +247,8 @@
       "/images/dress/whitepant-g2.webp"
     ],
     "description": "مناسب روزای گرم، راحت و خنک",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "11",
@@ -263,7 +272,8 @@
       "/images/dress/cacaou-g3.webp"
     ],
     "description": "نه زیاد شلوغ ، نه زیاد ساده",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "12",
@@ -286,7 +296,8 @@
       "/images/dress/whiteskirt-g2.webp"
     ],
     "description": "نه زیاد شلوغ ، نه زیاد ساده",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "13",
@@ -306,18 +317,27 @@
       "/images/dress/golbahar-g3.webp"
     ],
     "description": "عطر گل پخش میشه با پوشیدنش",
-    "inventory": false,
+    "inventory": 1,
     "features": [
-      "قد دامن ۹۴",
-      "قد شومیز ۵۱"
-    ]
+      {
+        "featureId": "1",
+        "featureTitle": "قد شومیز",
+        "featureValue": "۵۱"
+      },
+      {
+        "featureId": "2",
+        "featureTitle": "قد دامن",
+        "featureValue": "۹۴"
+      }
+    ],
+    "sale": 0
   },
   {
-    "id": "15",
-    "slug": "torang",
-    "title": "شلوار ترنگ",
-    "category": "pants",
-    "price": 980000,
+    "id": "14",
+    "slug": "anardoon",
+    "title": "کراپ کت اناردون",
+    "category": "jackets",
+    "price": 1200000,
     "sizes": [
       1,
       2
@@ -326,17 +346,38 @@
       "تک رنگ"
     ],
     "type": "لینن وارداتی",
-    "coverImage": "/images/dress/torang.webp",
+    "coverImage": "/images/dress/anardoon.webp",
     "gallery": [
-      "/images/dress/torang.webp",
-      "/images/dress/torang-g1.webp",
-      "/images/dress/torang-g2.webp",
-      "/images/dress/torang-g3.webp",
-      "/images/dress/torang-g4.webp",
-      "/images/dress/torang-g5.webp"
+      "/images/dress/anardoon.webp"
     ],
     "description": "",
-    "inventory": false
+    "inventory": 0,
+    "sale": 0
+  },
+  {
+    "id": "15",
+    "slug": "zerangar",
+    "title": "شلوار زرنگار",
+    "category": "pants",
+    "price": 1600000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/zerangar.webp",
+    "gallery": [
+      "/images/dress/zerangar.webp",
+      "/images/dress/zerangar-g2.webp",
+      "/images/dress/zerangar-g3.webp",
+      "/images/dress/zerangar-g4.webp"
+    ],
+    "description": "",
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "16",
@@ -359,7 +400,8 @@
       "/images/dress/nilabshomise-g2.webp"
     ],
     "description": "شومیز خنک و سبک با تن خور راحت و جذاب",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "17",
@@ -382,7 +424,8 @@
       "/images/dress/nilabshomise-g2.webp"
     ],
     "description": "کت خنک و سبک با تن خور راحت و جذاب",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "18",
@@ -426,7 +469,8 @@
         "price": 300000
       }
     ],
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "20",
@@ -443,7 +487,8 @@
       "/images/dress/barooka-g5.webp"
     ],
     "description": "",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "21",
@@ -470,7 +515,8 @@
       "/images/dress/noghretab-g6.webp"
     ],
     "description": "هم برای استایل کژوآل و هم استایل رسمی",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "24",
@@ -514,7 +560,59 @@
         "price": 1300000
       }
     ],
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
+  },
+  {
+    "id": "25",
+    "slug": "safari_jacket",
+    "title": "کراپ کت سافاری",
+    "category": "jackets",
+    "price": 1100000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/safari.webp",
+    "gallery": [
+      "/images/dress/safari.webp",
+      "/images/dress/safari-g1.webp",
+      "/images/dress/safari-g2.webp",
+      "/images/dress/safari-g3.webp"
+    ],
+    "description": "کت لینن سرمه ای کوتاه و خنک که ترکبیش با زرد کره ای عالی میشه",
+    "inventory": 1,
+    "sale": 0
+  },
+  {
+    "id": "26",
+    "slug": "lemora_jacket",
+    "title": "کت لمورا",
+    "category": "jackets",
+    "price": 1100000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "سرمه ای"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/lemora.webp",
+    "gallery": [
+      "/images/dress/lemora.webp",
+      "/images/dress/lemora-g1.webp",
+      "/images/dress/lemora-g2.webp",
+      "/images/dress/lemora-g3.webp",
+      "/images/dress/lemora-g4.webp"
+    ],
+    "description": "کت لینن سرمه ای کوتاه و خنک که ترکبیش با زرد کره ای عالی میشه",
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "27",
@@ -537,7 +635,8 @@
       "/images/dress/tarika-g2.webp"
     ],
     "description": "اینقدر فرم داره که لازم نیست هیج اکسسوری اضافه ای کنارش باشه",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
   },
   {
     "id": "28",
@@ -556,6 +655,31 @@
       "/images/dress/sehrbelt-g2.webp"
     ],
     "description": "کمربند دست دوز با طرح سنتی و نگین های ظریف",
-    "inventory": false
+    "inventory": 1,
+    "sale": 0
+  },
+  {
+    "id": "29",
+    "slug": "torang",
+    "title": "شلوار ترنگ",
+    "category": "pants",
+    "price": 1600000,
+    "sizes": [
+      1,
+      2
+    ],
+    "colors": [
+      "تک رنگ"
+    ],
+    "type": "لینن وارداتی",
+    "coverImage": "/images/dress/torang.webp",
+    "gallery": [
+      "/images/dress/torang.webp",
+      
+      "/images/dress/torang-g5.webp"
+    ],
+    "description": "",
+    "inventory": 1,
+    "sale":0
   }
 ]

@@ -1,12 +1,11 @@
 "use client";
-
-import { use } from "react";
+import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import products from "@/data/products.json";
-import { ProductGallery, RandomProduct } from "@/component";
 import { MoreDesc, Product } from "@/types";
-import toast from "react-hot-toast";
 import { usePrice } from "@/hooks/useSalePrice";
+import { ProductGallery, RandomProduct } from "@/component";
+import { use } from "react";
 
 function getProduct(id: string) {
   const product = products.find((p: Product) => p.id.toString() === id);
@@ -22,14 +21,15 @@ export default function ProductDetailPage({
   const { id } = use(params);
   if (!id) throw new Error("Invalid product ID");
   const product = getProduct(id);
+  const hasDiscount = product.sale > 0;
   const finalPrice = usePrice({
     originalPrice: product.price,
     sale: product.sale,
   });
-  const colors = product.colors ?? "";
-  const sizes = product.sizes ?? "";
-  const features = product.features;
-  const moreDescription = product.moreDescription ?? "";
+  const colors = product.colors ?? [];
+  const sizes = product.sizes ?? [];
+  const features = product.features ?? [];
+  const moreDescription: MoreDesc[] = product.moreDescription ?? [];
   return (
     <section className="container mx-auto px-4 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
@@ -43,12 +43,12 @@ export default function ProductDetailPage({
           <div className="flex flex-col gap-5 mb-10">
             <div className="relative flex items-center w-full justify-between">
               <h1 className="text-3xl md:text-4xl">{product.title}</h1>
-              {product.inventory && (
+              {product.inventory === 0 && (
                 <span className="text-2xl text-red-600 font-semibold">
                   {"ناموجود"}
                 </span>
               )}
-              {product.sale && (
+              {hasDiscount && (
                 <span className="text-sm md:text-base flex items-center justify-center bg-red-600 text-white px-3 py-px w-fit">
                   {product.sale}
                   {"%"}
@@ -59,7 +59,7 @@ export default function ProductDetailPage({
             <div className="flex flex-col gap-2 text-[#E5E1DA]">
               <div
                 className={`flex items-center gap-1  ${
-                  product.sale
+                  hasDiscount
                     ? "text-gray-300 text-sm md:text-base line-through decoration-solid decoration-1 decoration-red-300"
                     : "text-xl md:text-2xl"
                 }`}
@@ -67,14 +67,14 @@ export default function ProductDetailPage({
                 <p>{product.price?.toLocaleString()}</p>
                 <span> تومان</span>
               </div>
-              {product.sale && (
+              {hasDiscount && (
                 <div className="flex items-center gap-1 text-xl md:text-2xl">
                   <p>{finalPrice.toLocaleString()}</p>
                   <span> تومان</span>
                 </div>
               )}
             </div>
-            {moreDescription && (
+            {moreDescription.length > 0 && (
               <div className="flex flex-col gap-2">
                 <h3 className="font-medium text-xl">آیتم ها به صورت تکی</h3>
                 {moreDescription.map((item: MoreDesc) => (
@@ -96,21 +96,21 @@ export default function ProductDetailPage({
               </div>
               <div className="flex flex-col gap-2">
                 <span>سایز</span>
-                {sizes ? (
+                {sizes.length > 0 ? (
                   <ul className="flex flex-col items-start gap-2">
                     {sizes.map((s, i) => (
                       <li
                         key={i}
-                        className="text-sm h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
+                        className="w-fit text-sm h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center"
                       >
                         {s === 1
-                          ? `${s} مناسب سایز ۳۸ تا  ۴۲`
+                          ? `${s} مناسب سایز ۳۸ تا ۴۲`
                           : `${s} مناسب سایز ۴۲ تا ۴۶`}
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-sm w-fit h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center">
+                  <p className="w-fit text-sm h-8 px-4 py-2 border border-[#E5E1DA] text-[#E5E1DA] flex items-center justify-center">
                     فری سایز هست
                   </p>
                 )}
@@ -129,21 +129,31 @@ export default function ProductDetailPage({
                 </ul>
               </div>
             </div>
-
-            {features && (
+            {features.length > 0 && (
               <div className="flex flex-col gap-2">
                 <span>توضیحات بیشتر</span>
-                <ul className="flex flex-col gap-2  w-full p-2 border">
-                  {features.map((f: string) => (
-                    <li key={f}>{f}</li>
+                <ul className="flex flex-col w-full border">
+                  {features.map((f) => (
+                    <li
+                      key={f.featureId}
+                      className="p-2 border-b last:border-b-0"
+                    >
+                      {f.featureTitle}: {f.featureValue}
+                    </li>
                   ))}
                 </ul>
               </div>
             )}
           </div>
           <button
-            className="cursor-pointer w-full hidden md:inline-block text-center px-4 py-2 bg-[#E5E1DA] text-black transition"
+            disabled={product.inventory === 0}
+            className={`w-full hidden md:inline-block text-center px-4 py-2 transition ${
+              product.inventory === 0
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-[#E5E1DA] text-black cursor-pointer"
+            }`}
             onClick={() =>
+              product.inventory > 0 &&
               toast.error("در حال حاضر امکان خرید از طریق سایت وجود ندارد")
             }
           >

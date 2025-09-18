@@ -11,63 +11,70 @@ type Props = {
 
 export const ProductCard = ({ product, textColor }: Props) => {
   const router = useRouter();
+  const hasDiscount = product.sale > 0;
   const finalPrice = usePrice({
     originalPrice: product.price,
     sale: product.sale,
   });
+
   const goToProductPage = (id: string) => {
     router.push(`/product/${id}`);
   };
+
   return (
     <div
       onClick={() => goToProductPage(product.id)}
-      className="relative overflow-hidden cursor-pointer transition"
+      role="button"
+      className="relative aspect-auto w-full overflow-hidden cursor-pointer transition"
     >
-      <Image
-        src={product.coverImage || "/placeholder.png"}
-        alt={product.title}
-        className="w-full h-[230px] sm:h-[330px] object-cover mb-5"
-        width={250}
-        height={300}
-      />
+      <div className="relative w-full h-[230px] sm:h-[330px] md:h-[350px] mb-5">
+        <Image
+          src={product.coverImage || "/placeholder.png"}
+          alt={`تصویر ${product.title}`}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, 33vw"
+          placeholder="blur"
+          blurDataURL="/placeholder.png"
+        />
+      </div>
+
       <div className="flex flex-col justify-center gap-5 pb-3 md:pb-0">
-        <div className="flex flex-col sm:flex-row  sm:justify-between gap-2 text-xs min-[500px]:text-base">
+        <div className="flex flex-col sm:flex-row sm:justify-between gap-2 text-xs min-[500px]:text-base">
           <h3 className={`text-start ${textColor}`}>{product.title}</h3>
           <div className={`flex flex-col gap-2 ${textColor}`}>
             <div className="flex items-center gap-1 text-sm">
               <p
                 className={`text-end ${
-                  product.sale
-                    ? "text-gra-500 line-through decoration-solid decoration-1 decoration-red-500"
+                  hasDiscount
+                    ? "text-gray-500 line-through decoration-solid decoration-1 decoration-red-500"
                     : ""
                 }`}
               >
                 {product.price?.toLocaleString()}
               </p>
-              <span> تومان</span>
+              <span>تومان</span>
             </div>
-            {product.sale ? (
+            {hasDiscount ? (
               <div className={`${textColor} flex items-center gap-1 text-sm`}>
                 <p>{finalPrice.toLocaleString()}</p>
-                <span> تومان</span>
+                <span>تومان</span>
               </div>
             ) : (
               <div className="invisible flex items-center gap-1 text-sm">
-                <p>0</p>
-                <span>تومان</span>
+                null
               </div>
             )}
           </div>
         </div>
-        {product.inventory && (
-          <span className="absolute top-3 text-sm right-0 rounded-tl-xl rounded-bl-xl flex items-center justify-center bg-gray-400 text-gray-100 px-3 py-px w-fit">
-            {"ناموجود"}
+        {product.inventory === 0 && (
+          <span className="absolute top-3 right-0 text-sm rounded-tl-xl rounded-bl-xl flex items-center justify-center bg-gray-400 text-gray-100 px-3 py-px">
+            ناموجود
           </span>
         )}
-        {product.sale && (
-          <span className="absolute top-3 text-sm left-0 rounded-tr-xl rounded-br-xl flex items-center justify-center bg-red-600 text-white px-3 py-px w-fit">
-            {product.sale}
-            {"%"}
+        {hasDiscount && (
+          <span className="absolute top-3 left-0 text-sm rounded-tr-xl rounded-br-xl flex items-center justify-center bg-red-600 text-white px-3 py-px">
+            {product.sale}%
           </span>
         )}
       </div>

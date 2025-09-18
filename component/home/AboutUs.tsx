@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -50,9 +50,12 @@ export const AboutUs = () => {
           className="relative border flex justify-start"
         >
           <div className="w-[250px] h-[300px] md:w-[350px] md:h-[420px] relative top-2 left-2 sm:top-5 sm:left-5">
-            <img
+            <Image
               src="/images/tarika.webp"
-              className="w-full h-full object-cover"
+              alt="تصویر برند روناک مجدی"
+              fill
+              priority
+              className="object-cover"
             />
           </div>
         </motion.div>

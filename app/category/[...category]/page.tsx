@@ -72,7 +72,7 @@ export default function CategoryPage({
           <NoItem />
         ) : (
           <div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-4"
           >
             {displayedProducts.map((product) => (
               <motion.div key={product.id} variants={itemVariants}>

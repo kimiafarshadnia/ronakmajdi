@@ -1,7 +1,9 @@
 "use client";
+
 import { useState } from "react";
 import { Icon } from "../ui/Icon";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface FAQItem {
   question: string;
@@ -21,11 +23,11 @@ const faqs: FAQItem[] = [
   {
     question: "آیا امکان بازگرداندن کالا وجود دارد؟",
     answer: `مرجوع و یا تعویض کالا فقط و فقط در صورت اشتباه از مجموعه روناک مجدی با شرایط زیر امکان‌پذیر است:
-      1. محصول استفاده نشده باشد.
-      2. محصول هیچ‌گونه بوی ادکلن، بدن و … ندهد.
-      3. اتیکت به محصول متصل باشد.
-      4. مدت‌زمان درخواست مرجوعی و تعویض برای سفارشات تهران حداکثر ۷۲ ساعت‌کاری و برای شهرستان یک هفته کاری پس از ثبت سفارش می‌باشد.
-      5. محصولات خریداری‌شده در فروش ویژه به هیچ عنوان تعویض و مرجوعی ندارند.`,
+1. محصول استفاده نشده باشد.
+2. محصول هیچ‌گونه بوی ادکلن، بدن و … ندهد.
+3. اتیکت به محصول متصل باشد.
+4. مدت‌زمان درخواست مرجوعی و تعویض برای سفارشات تهران حداکثر ۷۲ ساعت‌کاری و برای شهرستان یک هفته کاری پس از ثبت سفارش می‌باشد.
+5. محصولات خریداری‌شده در فروش ویژه به هیچ عنوان تعویض و مرجوعی ندارند.`,
   },
   {
     question: "چطور می‌توانم با پشتیبانی تماس بگیرم؟",
@@ -47,33 +49,45 @@ export const FAQSection = () => {
         سوالات متداول
       </h2>
       <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div key={index} className="rounded-xl shadow bg-[#111111]">
-            <button
-              onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center p-4 text-right cursor-pointer"
-            >
-              <span className="text-sm sm:text-base">{faq.question}</span>
-              <Icon
-                iconName={openIndex === index ? faChevronUp : faChevronDown}
-              />
-            </button>
+        {faqs.map((faq, index) => {
+          const isOpen = openIndex === index;
+          return (
+            <div key={index} className="rounded-xl shadow bg-[#111111]">
+              <button
+                onClick={() => toggleFAQ(index)}
+                aria-expanded={isOpen}
+                aria-controls={`faq-answer-${index}`}
+                className="w-full flex justify-between items-center p-4 text-right cursor-pointer"
+              >
+                <span className="text-sm sm:text-base">{faq.question}</span>
+                <Icon iconName={isOpen ? faChevronUp : faChevronDown} />
+              </button>
 
-            <div
-              className={`grid transition-all duration-300 ease-in-out ${
-                openIndex === index
-                  ? "grid-rows-[1fr] opacity-100"
-                  : "grid-rows-[0fr] opacity-0"
-              }`}
-            >
-              <div className="overflow-hidden">
-                <div className="whitespace-pre-line p-4 text-xs sm:text-sm text-gray-400 leading-relaxed">
-                  {faq.answer}
-                </div>
-              </div>
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    key="content"
+                    initial="collapsed"
+                    animate="open"
+                    exit="collapsed"
+                    variants={{
+                      open: { opacity: 1, height: "auto" },
+                      collapsed: { opacity: 0, height: 0 },
+                    }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="whitespace-pre-line p-4 text-xs sm:text-sm text-gray-300 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

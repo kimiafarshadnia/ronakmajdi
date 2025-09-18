@@ -24,10 +24,10 @@ export const menuItems: MenuItem[] = [
         title: "شلوار ",
         href: "/category/pants",
       },
-      {
-        title: "شلوار لی",
-        href: "/category/lea",
-      },
+      // {
+      //   title: "شلوار لی",
+      //   href: "/category/lea",
+      // },
       {
         title: "دامن",
         href: "/category/skirt",

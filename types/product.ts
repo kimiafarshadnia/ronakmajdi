@@ -11,13 +11,19 @@ export type Product = {
   type: string;
   description: string;
   moreDescription?: MoreDesc[];
-  sale?: number;
-  inventory: boolean;
-  features?: string | string[];
+  inventory: number;
+  features?: Feature[];
+  sale: number;
 };
 
 export type MoreDesc = {
   id: string;
   title: string;
   price: number;
+};
+
+export type Feature = {
+  featureId: string;
+  featureTitle: string;
+  featureValue: string;
 };
